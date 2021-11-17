@@ -19,6 +19,22 @@ class ProfileViewModel: ObservableObject {
         checkStat()
     }
     
+    func changeProfileImage(image: UIImage) {
+        ImageUploader.uploadImage(image: image, type: .profile) { imageURL in
+            guard let userID = self.user.id else { return }
+            Firestore.firestore().collection("users").document(userID).updateData([
+                "profileImageURL" : imageURL
+            ]) { error in
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+                self.user.profileImageURL = imageURL
+            }
+
+        }
+    }
+    
     func follow() {
         if let didFollow = user.didFollow , didFollow {
             return
