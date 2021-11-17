@@ -13,6 +13,8 @@ struct RedditGroup: Decodable , Identifiable {
     let groupname : String
     var description : String
     var following : Int
+    var imageURL : String?
+    var backgroundImageURL : String?
     
     var didFollow: Bool? = false
 }
