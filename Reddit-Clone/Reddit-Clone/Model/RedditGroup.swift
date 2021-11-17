@@ -14,4 +14,5 @@ struct RedditGroup: Decodable , Identifiable {
     var description : String
     var following : Int
     
+    var didFollow: Bool? = false
 }
