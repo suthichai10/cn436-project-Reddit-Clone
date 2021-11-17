@@ -13,6 +13,7 @@ struct User : Decodable , Identifiable  {
     let username : String
     let email : String
     let fullname : String
+    var profileImageURL : String?
     
     var followers : [User]?
     var userStat : UserStat?
