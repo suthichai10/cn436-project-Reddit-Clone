@@ -15,6 +15,9 @@ struct Post: Decodable , Identifiable {
     var ownerID : String
     var ownerUsername : String
     
+    let groupID : String?
+    let groupName : String?
+    
     var user : User?
     var didLike : Bool? = false
 }
