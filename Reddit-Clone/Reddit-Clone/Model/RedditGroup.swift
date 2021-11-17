@@ -10,6 +10,7 @@ import FirebaseFirestoreSwift
 
 struct RedditGroup: Decodable , Identifiable {
     @DocumentID var id : String?
+    let ownerID : String
     let groupname : String
     var description : String
     var following : Int
