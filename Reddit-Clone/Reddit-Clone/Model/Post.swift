@@ -12,8 +12,9 @@ struct Post: Decodable , Identifiable {
     @DocumentID var id : String?
     let caption : String
     var likes : Int
-    var ownerID : String
-    var ownerUsername : String
+    let imageURL : String?
+    let ownerID : String
+    let ownerUsername : String
     
     let groupID : String?
     let groupName : String?
