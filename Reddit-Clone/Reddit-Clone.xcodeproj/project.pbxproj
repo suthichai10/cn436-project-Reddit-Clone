@@ -3,23 +3,59 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120EE44227439C52005B2E32 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EE44127439C52005B2E32 /* SearchViewModel.swift */; };
+		120EE4442743AB37005B2E32 /* RedditGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EE4432743AB37005B2E32 /* RedditGroup.swift */; };
+		120EE4462743DE33005B2E32 /* RedditSearchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EE4452743DE33005B2E32 /* RedditSearchData.swift */; };
+		120EE44C274401C8005B2E32 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EE44B274401C8005B2E32 /* Comment.swift */; };
+		120EE44E274405E6005B2E32 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EE44D274405E6005B2E32 /* CommentViewModel.swift */; };
+		120EE45027441D8D005B2E32 /* UserCommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EE44F27441D8D005B2E32 /* UserCommentViewModel.swift */; };
+		120EE45227441F53005B2E32 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EE45127441F53005B2E32 /* ProfileViewModel.swift */; };
 		122BB1C5273EACE500D00E76 /* Reddit_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122BB1C4273EACE500D00E76 /* Reddit_CloneApp.swift */; };
 		122BB1C7273EACE500D00E76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122BB1C6273EACE500D00E76 /* ContentView.swift */; };
 		122BB1C9273EACE600D00E76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 122BB1C8273EACE600D00E76 /* Assets.xcassets */; };
 		122BB1CC273EACE600D00E76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 122BB1CB273EACE600D00E76 /* Preview Assets.xcassets */; };
+		12F2F7C02744EFBD003365C8 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F2F7BF2744EFBD003365C8 /* UploadPostViewModel.swift */; };
+		12F2F7C327451894003365C8 /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F2F7C227451894003365C8 /* GroupViewModel.swift */; };
+		12FC56722742882D00E1F653 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC56712742882D00E1F653 /* User.swift */; };
+		12FC56772742961C00E1F653 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC56762742961C00E1F653 /* FeedViewModel.swift */; };
+		12FC567B2742965F00E1F653 /* FeedCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC567A2742965F00E1F653 /* FeedCellViewModel.swift */; };
+		12FC567D274297D000E1F653 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC567C274297D000E1F653 /* Post.swift */; };
+		12FC567F2742A28700E1F653 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12FC567E2742A28700E1F653 /* GoogleService-Info.plist */; };
+		12FC56A92742C14B00E1F653 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 12FC56A82742C14B00E1F653 /* FirebaseStorageSwift-Beta */; };
+		12FC56AB2742C14B00E1F653 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 12FC56AA2742C14B00E1F653 /* FirebaseFirestoreSwift-Beta */; };
+		12FC56AD2742C14B00E1F653 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 12FC56AC2742C14B00E1F653 /* FirebaseStorage */; };
+		12FC56AF2742C14B00E1F653 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 12FC56AE2742C14B00E1F653 /* FirebaseAuth */; };
+		12FC56B12742C14B00E1F653 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 12FC56B02742C14B00E1F653 /* FirebaseFirestore */; };
+		12FC56B32742C14B00E1F653 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 12FC56B22742C14B00E1F653 /* FirebaseDatabase */; };
+		12FC56B62742C6C600E1F653 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC56B52742C6C600E1F653 /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		120EE44127439C52005B2E32 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		120EE4432743AB37005B2E32 /* RedditGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditGroup.swift; sourceTree = "<group>"; };
+		120EE4452743DE33005B2E32 /* RedditSearchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditSearchData.swift; sourceTree = "<group>"; };
+		120EE44B274401C8005B2E32 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		120EE44D274405E6005B2E32 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
+		120EE44F27441D8D005B2E32 /* UserCommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCommentViewModel.swift; sourceTree = "<group>"; };
+		120EE45127441F53005B2E32 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		122BB1C1273EACE500D00E76 /* Reddit-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reddit-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		122BB1C4273EACE500D00E76 /* Reddit_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reddit_CloneApp.swift; sourceTree = "<group>"; };
 		122BB1C6273EACE500D00E76 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		122BB1C8273EACE600D00E76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		122BB1CB273EACE600D00E76 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		122BB1CD273EACE600D00E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12F2F7BF2744EFBD003365C8 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
+		12F2F7C227451894003365C8 /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
+		12FC56712742882D00E1F653 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		12FC56762742961C00E1F653 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		12FC567A2742965F00E1F653 /* FeedCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellViewModel.swift; sourceTree = "<group>"; };
+		12FC567C274297D000E1F653 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		12FC567E2742A28700E1F653 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		12FC56B52742C6C600E1F653 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,12 +63,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12FC56B32742C14B00E1F653 /* FirebaseDatabase in Frameworks */,
+				12FC56A92742C14B00E1F653 /* FirebaseStorageSwift-Beta in Frameworks */,
+				12FC56AB2742C14B00E1F653 /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				12FC56AD2742C14B00E1F653 /* FirebaseStorage in Frameworks */,
+				12FC56B12742C14B00E1F653 /* FirebaseFirestore in Frameworks */,
+				12FC56AF2742C14B00E1F653 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		120EE44027439B7D005B2E32 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				120EE44127439C52005B2E32 /* SearchViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		120EE4472743FC5D005B2E32 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				120EE45127441F53005B2E32 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		120EE44A2743FFCC005B2E32 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				120EE44D274405E6005B2E32 /* CommentViewModel.swift */,
+				120EE44F27441D8D005B2E32 /* UserCommentViewModel.swift */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
 		122BB1B8273EACE500D00E76 = {
 			isa = PBXGroup;
 			children = (
@@ -52,6 +119,9 @@
 		122BB1C3273EACE500D00E76 /* Reddit-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				12FC567E2742A28700E1F653 /* GoogleService-Info.plist */,
+				12FC5670274287FF00E1F653 /* ViewModel */,
+				12FC566F274287F600E1F653 /* Model */,
 				122BB1C4273EACE500D00E76 /* Reddit_CloneApp.swift */,
 				122BB1C6273EACE500D00E76 /* ContentView.swift */,
 				122BB1C8273EACE600D00E76 /* Assets.xcassets */,
@@ -67,6 +137,65 @@
 				122BB1CB273EACE600D00E76 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		12F2F7BE2744EFA0003365C8 /* UploadPost */ = {
+			isa = PBXGroup;
+			children = (
+				12F2F7BF2744EFBD003365C8 /* UploadPostViewModel.swift */,
+			);
+			path = UploadPost;
+			sourceTree = "<group>";
+		};
+		12F2F7C127451886003365C8 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				12F2F7C227451894003365C8 /* GroupViewModel.swift */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		12FC566F274287F600E1F653 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				12FC56712742882D00E1F653 /* User.swift */,
+				12FC567C274297D000E1F653 /* Post.swift */,
+				120EE4432743AB37005B2E32 /* RedditGroup.swift */,
+				120EE4452743DE33005B2E32 /* RedditSearchData.swift */,
+				120EE44B274401C8005B2E32 /* Comment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		12FC5670274287FF00E1F653 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				12F2F7C127451886003365C8 /* Group */,
+				12F2F7BE2744EFA0003365C8 /* UploadPost */,
+				120EE44A2743FFCC005B2E32 /* Comment */,
+				120EE4472743FC5D005B2E32 /* Profile */,
+				120EE44027439B7D005B2E32 /* Search */,
+				12FC56B42742C6AC00E1F653 /* Authentication */,
+				12FC5675274295F500E1F653 /* Feed */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		12FC5675274295F500E1F653 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				12FC56762742961C00E1F653 /* FeedViewModel.swift */,
+				12FC567A2742965F00E1F653 /* FeedCellViewModel.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		12FC56B42742C6AC00E1F653 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				12FC56B52742C6C600E1F653 /* AuthViewModel.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +214,14 @@
 			dependencies = (
 			);
 			name = "Reddit-Clone";
+			packageProductDependencies = (
+				12FC56A82742C14B00E1F653 /* FirebaseStorageSwift-Beta */,
+				12FC56AA2742C14B00E1F653 /* FirebaseFirestoreSwift-Beta */,
+				12FC56AC2742C14B00E1F653 /* FirebaseStorage */,
+				12FC56AE2742C14B00E1F653 /* FirebaseAuth */,
+				12FC56B02742C14B00E1F653 /* FirebaseFirestore */,
+				12FC56B22742C14B00E1F653 /* FirebaseDatabase */,
+			);
 			productName = "Reddit-Clone";
 			productReference = 122BB1C1273EACE500D00E76 /* Reddit-Clone.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +249,9 @@
 				Base,
 			);
 			mainGroup = 122BB1B8273EACE500D00E76;
+			packageReferences = (
+				12FC56A72742C14B00E1F653 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 122BB1C2273EACE500D00E76 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +268,7 @@
 			files = (
 				122BB1CC273EACE600D00E76 /* Preview Assets.xcassets in Resources */,
 				122BB1C9273EACE600D00E76 /* Assets.xcassets in Resources */,
+				12FC567F2742A28700E1F653 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +279,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				120EE44E274405E6005B2E32 /* CommentViewModel.swift in Sources */,
+				120EE4442743AB37005B2E32 /* RedditGroup.swift in Sources */,
 				122BB1C7273EACE500D00E76 /* ContentView.swift in Sources */,
+				12FC567B2742965F00E1F653 /* FeedCellViewModel.swift in Sources */,
+				120EE44227439C52005B2E32 /* SearchViewModel.swift in Sources */,
 				122BB1C5273EACE500D00E76 /* Reddit_CloneApp.swift in Sources */,
+				120EE45227441F53005B2E32 /* ProfileViewModel.swift in Sources */,
+				120EE4462743DE33005B2E32 /* RedditSearchData.swift in Sources */,
+				12F2F7C327451894003365C8 /* GroupViewModel.swift in Sources */,
+				120EE45027441D8D005B2E32 /* UserCommentViewModel.swift in Sources */,
+				12FC56B62742C6C600E1F653 /* AuthViewModel.swift in Sources */,
+				12FC567D274297D000E1F653 /* Post.swift in Sources */,
+				12FC56772742961C00E1F653 /* FeedViewModel.swift in Sources */,
+				120EE44C274401C8005B2E32 /* Comment.swift in Sources */,
+				12FC56722742882D00E1F653 /* User.swift in Sources */,
+				12F2F7C02744EFBD003365C8 /* UploadPostViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +481,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		12FC56A72742C14B00E1F653 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		12FC56A82742C14B00E1F653 /* FirebaseStorageSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12FC56A72742C14B00E1F653 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageSwift-Beta";
+		};
+		12FC56AA2742C14B00E1F653 /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12FC56A72742C14B00E1F653 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		12FC56AC2742C14B00E1F653 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12FC56A72742C14B00E1F653 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		12FC56AE2742C14B00E1F653 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12FC56A72742C14B00E1F653 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		12FC56B02742C14B00E1F653 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12FC56A72742C14B00E1F653 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		12FC56B22742C14B00E1F653 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12FC56A72742C14B00E1F653 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 122BB1B9273EACE500D00E76 /* Project object */;
 }
