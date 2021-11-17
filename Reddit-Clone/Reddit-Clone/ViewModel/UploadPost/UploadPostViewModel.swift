@@ -67,7 +67,7 @@ class UploadPostViewModel  {
         ] as [String : Any]
         
         if let image = image {
-            ImageUploader.uploadImage(image:image,type: .group) { imageURL in
+            ImageUploader.uploadImage(image:image,type: .post) { imageURL in
                 data.updateValue(imageURL, forKey: "imageURL")
             }
         }
