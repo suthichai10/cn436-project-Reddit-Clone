@@ -20,6 +20,7 @@
 		122BB1CC273EACE600D00E76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 122BB1CB273EACE600D00E76 /* Preview Assets.xcassets */; };
 		12F2F7C02744EFBD003365C8 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F2F7BF2744EFBD003365C8 /* UploadPostViewModel.swift */; };
 		12F2F7C327451894003365C8 /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F2F7C227451894003365C8 /* GroupViewModel.swift */; };
+		12F2F7C6274553D1003365C8 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F2F7C5274553D1003365C8 /* ImageUploader.swift */; };
 		12FC56722742882D00E1F653 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC56712742882D00E1F653 /* User.swift */; };
 		12FC56772742961C00E1F653 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC56762742961C00E1F653 /* FeedViewModel.swift */; };
 		12FC567B2742965F00E1F653 /* FeedCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC567A2742965F00E1F653 /* FeedCellViewModel.swift */; };
@@ -50,6 +51,7 @@
 		122BB1CD273EACE600D00E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12F2F7BF2744EFBD003365C8 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 		12F2F7C227451894003365C8 /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
+		12F2F7C5274553D1003365C8 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		12FC56712742882D00E1F653 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		12FC56762742961C00E1F653 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		12FC567A2742965F00E1F653 /* FeedCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellViewModel.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		122BB1C3273EACE500D00E76 /* Reddit-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				12F2F7C4274553B8003365C8 /* API */,
 				12FC567E2742A28700E1F653 /* GoogleService-Info.plist */,
 				12FC5670274287FF00E1F653 /* ViewModel */,
 				12FC566F274287F600E1F653 /* Model */,
@@ -153,6 +156,14 @@
 				12F2F7C227451894003365C8 /* GroupViewModel.swift */,
 			);
 			path = Group;
+			sourceTree = "<group>";
+		};
+		12F2F7C4274553B8003365C8 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				12F2F7C5274553D1003365C8 /* ImageUploader.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		12FC566F274287F600E1F653 /* Model */ = {
@@ -281,6 +292,7 @@
 			files = (
 				120EE44E274405E6005B2E32 /* CommentViewModel.swift in Sources */,
 				120EE4442743AB37005B2E32 /* RedditGroup.swift in Sources */,
+				12F2F7C6274553D1003365C8 /* ImageUploader.swift in Sources */,
 				122BB1C7273EACE500D00E76 /* ContentView.swift in Sources */,
 				12FC567B2742965F00E1F653 /* FeedCellViewModel.swift in Sources */,
 				120EE44227439C52005B2E32 /* SearchViewModel.swift in Sources */,

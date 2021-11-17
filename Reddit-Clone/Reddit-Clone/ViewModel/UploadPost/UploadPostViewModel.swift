@@ -5,6 +5,7 @@
 //  Created by suthichai on 17/11/2564 BE.
 //
 
+import SwiftUI
 import Firebase
 import FirebaseFirestoreSwift
 
@@ -18,23 +19,30 @@ class UploadPostViewModel  {
     
     func uploadPost() {
         switch postType {
-        case .user(let caption):
-            uploadUserPost(caption: caption)
-        case .group(let groupID , let groupName ,let caption) :
-            uploadGroupPost(groupID: groupID ,groupName: groupName ,caption: caption)
+        case .user(let image ,let caption):
+            uploadUserPost(image: image ,caption: caption)
+        case .group(let image ,let groupID , let groupName ,let caption) :
+            uploadGroupPost(image: image,groupID: groupID ,groupName: groupName ,caption: caption)
         }
     }
     
-    func uploadUserPost(caption: String) {
+    func uploadUserPost(image: UIImage? , caption: String) {
         guard let user = AuthViewModel.shared.currentUser else { return }
         guard let userID = user.id else { return }
-        let data = [
+        
+        var data = [
             "caption" : caption,
             "timestamp" : Timestamp(date: Date()),
             "ownerID" : userID ,
             "ownerUsername" : user.username,
             "likes" : 0
         ] as [String : Any]
+        
+        if let image = image {
+            ImageUploader.uploadImage(image:image , type:.post) { imageURL in
+                data.updateValue(imageURL , forKey: "imageURL")
+            }
+        }
         
         Firestore.firestore().collection("posts").addDocument(data: data) { error in
             if let error = error {
@@ -44,10 +52,11 @@ class UploadPostViewModel  {
         }
     }
     
-    func uploadGroupPost(groupID: String , groupName: String ,caption: String) {
+    func uploadGroupPost(image: UIImage?, groupID: String , groupName: String ,caption: String) {
         guard let user = AuthViewModel.shared.currentUser else { return }
         guard let userID = user.id else { return }
-        let data = [
+        
+        var data = [
             "caption" : caption,
             "timestamp" : Timestamp(date: Date()),
             "ownerID" : userID,
@@ -57,16 +66,23 @@ class UploadPostViewModel  {
             "likes" : 0
         ] as [String : Any]
         
+        if let image = image {
+            ImageUploader.uploadImage(image:image,type: .group) { imageURL in
+                data.updateValue(imageURL, forKey: "imageURL")
+            }
+        }
+        
         Firestore.firestore().collection("posts").addDocument(data: data) { error in
             if let error = error {
                 print(error.localizedDescription)
                 return
             }
         }
+        
     }
 }
 
 enum PostType {
-    case user(String)
-    case group(String , String , String)
+    case user(UIImage ,String)
+    case group(UIImage ,String , String , String)
 }
