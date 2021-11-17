@@ -39,6 +39,7 @@ class GroupViewModel : ObservableObject {
         guard let userID = AuthViewModel.shared.currentUser?.id else { return }
         
         let data = [
+            "ownerID" : userID,
             "groupname" : groupname,
             "description" : description,
             "following" : 0
