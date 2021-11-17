@@ -5,7 +5,7 @@
 //  Created by suthichai on 17/11/2564 BE.
 //
 
-import Foundation
+import SwiftUI
 import Firebase
 import FirebaseFirestoreSwift
 
@@ -17,6 +17,38 @@ class GroupViewModel : ObservableObject {
         self.group = group
         fetchGroupPosts()
         checkFollow()
+    }
+    
+    func changeBackgroundImage(image: UIImage) {
+        ImageUploader.uploadImage(image: image, type: .group) { imageURL in
+            guard let userID = AuthViewModel.shared.currentUser?.id else { return }
+            guard let groupID = self.group.id else { return }
+            Firestore.firestore().collection("users").document(userID).collection("groups").document(groupID).updateData([
+                "backgroundImageURL" : imageURL
+            ]) { error in
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+                self.group.backgroundImageURL = imageURL
+            }
+        }
+    }
+    
+    func changeGroupImage(image: UIImage) {
+        ImageUploader.uploadImage(image: image, type: .group) { imageURL in
+            guard let userID = AuthViewModel.shared.currentUser?.id else { return }
+            guard let groupID = self.group.id else { return }
+            Firestore.firestore().collection("users").document(userID).collection("groups").document(groupID).updateData([
+                "groupImageURL" : imageURL
+            ]) { error in
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+                self.group.groupImageURL = imageURL
+            }
+        }
     }
     
     func fetchGroupPosts() {
@@ -45,7 +77,7 @@ class GroupViewModel : ObservableObject {
             "following" : 0
         ] as [String : Any]
         
-        Firestore.firestore().collection("users").document(userID).collection("group").addDocument(data: data)
+        Firestore.firestore().collection("users").document(userID).collection("groups").addDocument(data: data)
     }
     
     func follow() {
