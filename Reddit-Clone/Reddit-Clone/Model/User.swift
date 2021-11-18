@@ -17,6 +17,7 @@ struct User : Decodable , Identifiable  {
     
     var followers : [User]?
     var userStat : UserStat?
+    var userCommunityGroup : [RedditGroup]?
     
     var didFollow : Bool? = false
 }
