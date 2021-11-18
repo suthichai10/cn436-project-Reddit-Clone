@@ -41,6 +41,7 @@ class CommentViewModel : ObservableObject {
                     print(error.localizedDescription)
                     return
                 }
+                NotificationViewModel.sendNotification(withUID: self.post.ownerID, type: .comment, post: self.post)
             }
         }
     }
