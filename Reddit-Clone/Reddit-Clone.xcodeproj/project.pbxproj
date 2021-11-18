@@ -21,6 +21,10 @@
 		12F2F7C02744EFBD003365C8 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F2F7BF2744EFBD003365C8 /* UploadPostViewModel.swift */; };
 		12F2F7C327451894003365C8 /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F2F7C227451894003365C8 /* GroupViewModel.swift */; };
 		12F2F7C6274553D1003365C8 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F2F7C5274553D1003365C8 /* ImageUploader.swift */; };
+		12F2F7C92745834E003365C8 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F2F7C82745834E003365C8 /* MessageViewModel.swift */; };
+		12F2F7CB27458362003365C8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F2F7CA27458362003365C8 /* Message.swift */; };
+		12F2F7CE27458F04003365C8 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F2F7CD27458F04003365C8 /* Notification.swift */; };
+		12F2F7D027458F20003365C8 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F2F7CF27458F20003365C8 /* NotificationViewModel.swift */; };
 		12FC56722742882D00E1F653 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC56712742882D00E1F653 /* User.swift */; };
 		12FC56772742961C00E1F653 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC56762742961C00E1F653 /* FeedViewModel.swift */; };
 		12FC567B2742965F00E1F653 /* FeedCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FC567A2742965F00E1F653 /* FeedCellViewModel.swift */; };
@@ -52,6 +56,10 @@
 		12F2F7BF2744EFBD003365C8 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 		12F2F7C227451894003365C8 /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
 		12F2F7C5274553D1003365C8 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		12F2F7C82745834E003365C8 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		12F2F7CA27458362003365C8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		12F2F7CD27458F04003365C8 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		12F2F7CF27458F20003365C8 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		12FC56712742882D00E1F653 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		12FC56762742961C00E1F653 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		12FC567A2742965F00E1F653 /* FeedCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellViewModel.swift; sourceTree = "<group>"; };
@@ -166,6 +174,22 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		12F2F7C727458265003365C8 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				12F2F7C82745834E003365C8 /* MessageViewModel.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		12F2F7CC27458EF2003365C8 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				12F2F7CF27458F20003365C8 /* NotificationViewModel.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		12FC566F274287F600E1F653 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +198,8 @@
 				120EE4432743AB37005B2E32 /* RedditGroup.swift */,
 				120EE4452743DE33005B2E32 /* RedditSearchData.swift */,
 				120EE44B274401C8005B2E32 /* Comment.swift */,
+				12F2F7CA27458362003365C8 /* Message.swift */,
+				12F2F7CD27458F04003365C8 /* Notification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +207,8 @@
 		12FC5670274287FF00E1F653 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				12F2F7CC27458EF2003365C8 /* Notification */,
+				12F2F7C727458265003365C8 /* Messages */,
 				12F2F7C127451886003365C8 /* Group */,
 				12F2F7BE2744EFA0003365C8 /* UploadPost */,
 				120EE44A2743FFCC005B2E32 /* Comment */,
@@ -297,13 +325,17 @@
 				12FC567B2742965F00E1F653 /* FeedCellViewModel.swift in Sources */,
 				120EE44227439C52005B2E32 /* SearchViewModel.swift in Sources */,
 				122BB1C5273EACE500D00E76 /* Reddit_CloneApp.swift in Sources */,
+				12F2F7CB27458362003365C8 /* Message.swift in Sources */,
 				120EE45227441F53005B2E32 /* ProfileViewModel.swift in Sources */,
 				120EE4462743DE33005B2E32 /* RedditSearchData.swift in Sources */,
 				12F2F7C327451894003365C8 /* GroupViewModel.swift in Sources */,
+				12F2F7C92745834E003365C8 /* MessageViewModel.swift in Sources */,
 				120EE45027441D8D005B2E32 /* UserCommentViewModel.swift in Sources */,
 				12FC56B62742C6C600E1F653 /* AuthViewModel.swift in Sources */,
 				12FC567D274297D000E1F653 /* Post.swift in Sources */,
 				12FC56772742961C00E1F653 /* FeedViewModel.swift in Sources */,
+				12F2F7CE27458F04003365C8 /* Notification.swift in Sources */,
+				12F2F7D027458F20003365C8 /* NotificationViewModel.swift in Sources */,
 				120EE44C274401C8005B2E32 /* Comment.swift in Sources */,
 				12FC56722742882D00E1F653 /* User.swift in Sources */,
 				12F2F7C02744EFBD003365C8 /* UploadPostViewModel.swift in Sources */,

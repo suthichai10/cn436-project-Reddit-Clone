@@ -15,6 +15,7 @@ class ProfileViewModel: ObservableObject {
     init(user: User) {
         self.user = user
         fetchUserFollower()
+        fetchUserGroup()
         checkFollow()
         checkStat()
     }
@@ -41,18 +42,26 @@ class ProfileViewModel: ObservableObject {
         }
         guard let uid = user.id else { return }
         guard let userID = AuthViewModel.shared.currentUser?.id else { return }
-        Firestore.firestore().collection("following").document(userID).collection("user-following").document(uid).setData([:]) { error in
+        
+        let data = [
+            "username" : user.username,
+            "email" : user.email,
+            "fullname" : user.fullname
+        ]
+        
+        Firestore.firestore().collection("following").document(userID).collection("user-following").document(uid).setData(data) { error in
             if let error = error {
                 print(error.localizedDescription)
                 return
             }
             
-            Firestore.firestore().collection("followers").document(uid).collection("user-followers").document(userID).setData([:]) { error in
+            Firestore.firestore().collection("followers").document(uid).collection("user-followers").document(userID).setData(data) { error in
                 if let error = error {
                     print(error.localizedDescription)
                     return
                 }
                 self.user.didFollow = true
+                self.checkFollow()
             }
         }
     }
@@ -75,6 +84,7 @@ class ProfileViewModel: ObservableObject {
                     return
                 }
                 self.user.didFollow = false
+                self.checkFollow()
             }
         }
     }
@@ -141,6 +151,23 @@ class ProfileViewModel: ObservableObject {
             
             self.user.followers = documents.compactMap {
                 try? $0.data(as: User.self)
+            }
+        }
+    }
+    
+    func fetchUserGroup() {
+        guard let userID = user.id else { return }
+        
+        Firestore.firestore().collection("users").document(userID).collection("groups").getDocuments { (snap, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            
+            guard let documents = snap?.documents else { return }
+            
+            self.user.userCommunityGroup = documents.compactMap {
+                try? $0.data(as: RedditGroup.self)
             }
         }
     }
