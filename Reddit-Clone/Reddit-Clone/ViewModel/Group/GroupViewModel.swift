@@ -16,6 +16,7 @@ class GroupViewModel : ObservableObject {
     init(group: RedditGroup) {
         self.group = group
         fetchGroupPosts()
+        fetchGroupFollowers()
         checkFollow()
     }
     
@@ -23,7 +24,7 @@ class GroupViewModel : ObservableObject {
         ImageUploader.uploadImage(image: image, type: .group) { imageURL in
             guard let userID = AuthViewModel.shared.currentUser?.id else { return }
             guard let groupID = self.group.id else { return }
-            Firestore.firestore().collection("users").document(userID).collection("groups").document(groupID).updateData([
+            Firestore.firestore().collection("groups").document(userID).collection("user-groups").document(groupID).updateData([
                 "backgroundImageURL" : imageURL
             ]) { error in
                 if let error = error {
@@ -39,7 +40,7 @@ class GroupViewModel : ObservableObject {
         ImageUploader.uploadImage(image: image, type: .group) { imageURL in
             guard let userID = AuthViewModel.shared.currentUser?.id else { return }
             guard let groupID = self.group.id else { return }
-            Firestore.firestore().collection("users").document(userID).collection("groups").document(groupID).updateData([
+            Firestore.firestore().collection("groups").document(userID).collection("user-groups").document(groupID).updateData([
                 "groupImageURL" : imageURL
             ]) { error in
                 if let error = error {
@@ -77,23 +78,38 @@ class GroupViewModel : ObservableObject {
             "following" : 0
         ] as [String : Any]
         
-        Firestore.firestore().collection("users").document(userID).collection("groups").addDocument(data: data)
+        Firestore.firestore().collection("groups").document(userID).collection("user-groups").addDocument(data: data)
     }
     
     func follow() {
         if let didFollow = group.didFollow , didFollow {
             return
         }
-        guard let userID = AuthViewModel.shared.currentUser?.id else { return }
+        guard let user = AuthViewModel.shared.currentUser else { return }
+        guard let userID = user.id else { return }
         guard let groupID = group.id else { return }
         
-        Firestore.firestore().collection("groups-following").document(groupID).collection("user-following").document(userID).setData([:]) { error in
+        let data = [
+            "username" : user.username,
+            "email" : user.email,
+            "fullname" : user.fullname
+        ]
+        
+        Firestore.firestore().collection("groups-following").document(groupID).collection("user-following").document(userID).setData(data) { error in
             if let error = error {
                 print(error.localizedDescription)
                 return
             }
             
-            self.group.didFollow = true
+            Firestore.firestore().collection("group-followers").document(groupID).collection("user-followers").document(userID).setData(data) { error in
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+                self.group.didFollow = true
+                self.fetchGroupFollowers()
+            }
+            
         }
     }
     
@@ -110,8 +126,14 @@ class GroupViewModel : ObservableObject {
                 print(error.localizedDescription)
                 return
             }
-            
-            self.group.didFollow = false
+            Firestore.firestore().collection("group-followers").document(groupID).collection("user-followers").document(userID).setData([:]) { error in
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+                self.group.didFollow = false
+                self.fetchGroupFollowers()
+            }
         }
     }
     
@@ -129,6 +151,24 @@ class GroupViewModel : ObservableObject {
             guard let didFollow = snap?.exists else { return }
             
             self.group.didFollow = didFollow
+        }
+    }
+    
+    func fetchGroupFollowers() {
+        guard let groupID = group.id else { return }
+        
+        Firestore.firestore().collection("group-followers").document(groupID).collection("user-followers").getDocuments { (snap,error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            
+            guard let documents = snap?.documents else { return }
+            
+            self.group.groupStat.followers = documents.count
+            self.group.followers = documents.compactMap {
+                try? $0.data(as: User.self)
+            }
         }
     }
 }
