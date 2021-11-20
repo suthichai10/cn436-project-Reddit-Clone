@@ -77,7 +77,7 @@ struct LoginView: View {
                     Button {
                         viewModel.signIn(withEmail: email, password: password)
                     } label: {
-                        Text("Continue")
+                        Text("Login")
                             .font(.headline)
                             .foregroundColor(.white)
                             .frame(width: 360, height: 50)
