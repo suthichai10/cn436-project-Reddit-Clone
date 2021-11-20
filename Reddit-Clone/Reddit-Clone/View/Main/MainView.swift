@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
-    // @State var user: User
-    //@Binding var selectedIndex: Int
-    @State var selectedIndex = 0
+    @State var user: User
+    @Binding var selectedIndex: Int
     
     var body: some View {
         NavigationView {
@@ -36,7 +35,7 @@ struct MainView: View {
                     .tabItem { Image(systemName: "plus") }
                     .tag(2)
                 
-                ProfileView()
+                ProfileView(user: user)
                     .onTapGesture {
                         selectedIndex = 3
                     }
@@ -80,11 +79,5 @@ struct MainView: View {
         case 4: return "Notification"
         default: return ""
         }
-    }
-}
-
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
     }
 }

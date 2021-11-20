@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CreateComView: View {
-    
     @State var email = ""
     
     var body: some View {

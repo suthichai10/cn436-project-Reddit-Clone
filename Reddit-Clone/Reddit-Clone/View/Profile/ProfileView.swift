@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State var user : User
     var body: some View {
         VStack {
             LazyVStack {
@@ -17,17 +18,14 @@ struct ProfileView: View {
                             Image("reddit-top")
                                 .resizeTo(width: 90, height: 90)
                                 .clipShape(Circle())
-                            Text("My Name")
+                            Text("\(user.fullname)")
                                 .font(.system(size: 18, weight: .semibold))
                                 .foregroundColor(.white)
                                 .padding(.bottom, 3)
-                            Text("u/My_Name")
+                            Text("u/\(user.fullname)")
                                 .font(.system(size: 14))
                                 .foregroundColor(.white)
                                 .padding(.bottom, 3)
-                            Text("Hi")
-                                .font(.system(size: 14))
-                                .foregroundColor(.white)
                         }
                         
                         Spacer()
@@ -65,11 +63,5 @@ struct ProfileView: View {
             FeedView()
             
         }
-    }
-}
-
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView()
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NotificationCell: View {
-    @State var didLike = false
+    @ObservedObject var viewModel : NotificationViewModel
     
     var body: some View {
         
@@ -37,6 +37,6 @@ struct NotificationCell: View {
 
 struct NotificationCell_Previews: PreviewProvider {
     static var previews: some View {
-        NotificationCell()
+        NotificationCell(viewModel: NotificationViewModel())
     }
 }

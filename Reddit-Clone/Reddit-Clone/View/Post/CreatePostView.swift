@@ -13,7 +13,7 @@ struct CreatePostView: View {
     @State var captionText = ""
     @State var imagePickerPresented = false
     @State var selection: String?
-    //@ObservedObject var viewModel = UploadPostViewModel()
+    //@ObservedObject var viewModel = UploadPostViewModel(postType: )
     
     let names = [
             "r/com",

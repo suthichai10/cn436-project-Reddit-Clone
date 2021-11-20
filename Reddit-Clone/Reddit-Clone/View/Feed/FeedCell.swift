@@ -9,7 +9,10 @@ import SwiftUI
 import Kingfisher
 
 struct FeedCell: View {
-    @State var didLike = false
+    @ObservedObject var viewModel : FeedCellViewModel
+    var didLike : Bool {
+        viewModel.post.didLike ?? false
+    }
     
     var body: some View {
         
@@ -19,24 +22,30 @@ struct FeedCell: View {
                     .resizeTo(width: 36, height: 36)
                     .clipShape(Circle())
                 VStack(alignment: .leading) {
-                    Text("r/pernona")
-                        .font(.system(size: 18, weight: .semibold))
-                    Text("Posted By u/Me - 3h")
+                    if let groupName = viewModel.post.groupName {
+                        Text("r/\(groupName)")
+                            .font(.system(size: 18, weight: .semibold))
+                        Text("Posted By u/\(viewModel.post.ownerUsername)")
+                    } else {
+                        Text("u/\(viewModel.post.ownerUsername)")
+                            .font(.system(size: 18, weight: .semibold))
+                    }
+
                 }
             }
             .padding(.leading, 10)
             
-            Text("Hello man im die")
+            Text(viewModel.post.caption)
                 .font(.system(size: 18, weight: .semibold))
                 .padding(.leading, 5)
-            Image("test")
+            Image(viewModel.post.imageURL ?? "") // default image
                 .resizable()
                 .scaledToFit()
                 .clipped()
             
             HStack {
                 Button {
-                    didLike.toggle()
+                    didLike ? viewModel.unlike() : viewModel.like()
                 } label: {
                     Image(systemName: didLike ? "arrowtriangle.up.fill" : "arrowtriangle.up")
                         .resizeTo(width: 25, height: 25)
@@ -44,7 +53,7 @@ struct FeedCell: View {
                         .font(.system(size: 20))
                         .padding(.leading, 10)
                 }
-                Text("1")
+                Text("\(viewModel.post.likes)")
                     .padding(.trailing, 50)
                 Image(systemName: "plus.message")
                     .resizeTo(width: 25, height: 25)
@@ -60,11 +69,5 @@ struct FeedCell: View {
                 
             }
         }
-    }
-}
-
-struct FeedCell_Previews: PreviewProvider {
-    static var previews: some View {
-        FeedCell()
     }
 }
