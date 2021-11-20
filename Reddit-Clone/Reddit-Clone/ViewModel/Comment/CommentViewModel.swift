@@ -17,7 +17,7 @@ class CommentViewModel : ObservableObject {
         fetchComment()
     }
     
-    func uploadComment(comment: Comment) {
+    func uploadComment(comment: String) {
         guard let postID = post.id else { return }
         guard let user = AuthViewModel.shared.currentUser else { return }
         guard let userID = user.id else { return }

@@ -9,7 +9,7 @@ import SwiftUI
 import Firebase
 import FirebaseFirestoreSwift
 
-class UploadPostViewModel  {
+class UploadPostViewModel : ObservableObject {
     
     let postType : PostType
     

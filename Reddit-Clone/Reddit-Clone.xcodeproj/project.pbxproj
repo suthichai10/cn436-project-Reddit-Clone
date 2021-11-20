@@ -18,6 +18,29 @@
 		122BB1C7273EACE500D00E76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122BB1C6273EACE500D00E76 /* ContentView.swift */; };
 		122BB1C9273EACE600D00E76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 122BB1C8273EACE600D00E76 /* Assets.xcassets */; };
 		122BB1CC273EACE600D00E76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 122BB1CB273EACE600D00E76 /* Preview Assets.xcassets */; };
+		12D7793727497303009F0DD5 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7791E27497302009F0DD5 /* TextArea.swift */; };
+		12D7793827497303009F0DD5 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7791F27497302009F0DD5 /* CreatePostView.swift */; };
+		12D7793927497303009F0DD5 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7792027497302009F0DD5 /* PostView.swift */; };
+		12D7793A27497303009F0DD5 /* CreateComView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7792127497302009F0DD5 /* CreateComView.swift */; };
+		12D7793B27497303009F0DD5 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7792327497302009F0DD5 /* NotificationCell.swift */; };
+		12D7793C27497303009F0DD5 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7792427497303009F0DD5 /* NotificationView.swift */; };
+		12D7793D27497303009F0DD5 /* CommentCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7792627497303009F0DD5 /* CommentCellView.swift */; };
+		12D7793E27497303009F0DD5 /* CommentInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7792727497303009F0DD5 /* CommentInputView.swift */; };
+		12D7793F27497303009F0DD5 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7792827497303009F0DD5 /* CommentsView.swift */; };
+		12D7794027497303009F0DD5 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7792A27497303009F0DD5 /* SearchView.swift */; };
+		12D7794127497303009F0DD5 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7792B27497303009F0DD5 /* SearchBar.swift */; };
+		12D7794227497303009F0DD5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7792D27497303009F0DD5 /* ProfileView.swift */; };
+		12D7794327497303009F0DD5 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7792F27497303009F0DD5 /* FeedView.swift */; };
+		12D7794427497303009F0DD5 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7793027497303009F0DD5 /* FeedCell.swift */; };
+		12D7794527497303009F0DD5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7793227497303009F0DD5 /* MainView.swift */; };
+		12D7794627497303009F0DD5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7793427497303009F0DD5 /* LoginView.swift */; };
+		12D7794727497303009F0DD5 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7793527497303009F0DD5 /* ForgotPasswordView.swift */; };
+		12D7794827497303009F0DD5 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7793627497303009F0DD5 /* RegisterView.swift */; };
+		12D7794E27497311009F0DD5 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7794A27497311009F0DD5 /* CustomSecureField.swift */; };
+		12D7794F27497311009F0DD5 /* imagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7794B27497311009F0DD5 /* imagePicker.swift */; };
+		12D7795027497311009F0DD5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7794C27497311009F0DD5 /* Extensions.swift */; };
+		12D7795127497311009F0DD5 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7794D27497311009F0DD5 /* CustomTextField.swift */; };
+		12D77954274973A4009F0DD5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 12D77953274973A4009F0DD5 /* Kingfisher */; };
 		12F2F7C02744EFBD003365C8 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F2F7BF2744EFBD003365C8 /* UploadPostViewModel.swift */; };
 		12F2F7C327451894003365C8 /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F2F7C227451894003365C8 /* GroupViewModel.swift */; };
 		12F2F7C6274553D1003365C8 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F2F7C5274553D1003365C8 /* ImageUploader.swift */; };
@@ -53,6 +76,28 @@
 		122BB1C8273EACE600D00E76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		122BB1CB273EACE600D00E76 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		122BB1CD273EACE600D00E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12D7791E27497302009F0DD5 /* TextArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
+		12D7791F27497302009F0DD5 /* CreatePostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
+		12D7792027497302009F0DD5 /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		12D7792127497302009F0DD5 /* CreateComView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateComView.swift; sourceTree = "<group>"; };
+		12D7792327497302009F0DD5 /* NotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		12D7792427497303009F0DD5 /* NotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		12D7792627497303009F0DD5 /* CommentCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCellView.swift; sourceTree = "<group>"; };
+		12D7792727497303009F0DD5 /* CommentInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentInputView.swift; sourceTree = "<group>"; };
+		12D7792827497303009F0DD5 /* CommentsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
+		12D7792A27497303009F0DD5 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		12D7792B27497303009F0DD5 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		12D7792D27497303009F0DD5 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		12D7792F27497303009F0DD5 /* FeedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		12D7793027497303009F0DD5 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		12D7793227497303009F0DD5 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		12D7793427497303009F0DD5 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		12D7793527497303009F0DD5 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		12D7793627497303009F0DD5 /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		12D7794A27497311009F0DD5 /* CustomSecureField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
+		12D7794B27497311009F0DD5 /* imagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imagePicker.swift; sourceTree = "<group>"; };
+		12D7794C27497311009F0DD5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		12D7794D27497311009F0DD5 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		12F2F7BF2744EFBD003365C8 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 		12F2F7C227451894003365C8 /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
 		12F2F7C5274553D1003365C8 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
@@ -75,6 +120,7 @@
 			files = (
 				12FC56B32742C14B00E1F653 /* FirebaseDatabase in Frameworks */,
 				12FC56A92742C14B00E1F653 /* FirebaseStorageSwift-Beta in Frameworks */,
+				12D77954274973A4009F0DD5 /* Kingfisher in Frameworks */,
 				12FC56AB2742C14B00E1F653 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				12FC56AD2742C14B00E1F653 /* FirebaseStorage in Frameworks */,
 				12FC56B12742C14B00E1F653 /* FirebaseFirestore in Frameworks */,
@@ -129,9 +175,11 @@
 		122BB1C3273EACE500D00E76 /* Reddit-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				12D7794927497311009F0DD5 /* Utils */,
+				12D7791C27497302009F0DD5 /* View */,
+				12FC5670274287FF00E1F653 /* ViewModel */,
 				12F2F7C4274553B8003365C8 /* API */,
 				12FC567E2742A28700E1F653 /* GoogleService-Info.plist */,
-				12FC5670274287FF00E1F653 /* ViewModel */,
 				12FC566F274287F600E1F653 /* Model */,
 				122BB1C4273EACE500D00E76 /* Reddit_CloneApp.swift */,
 				122BB1C6273EACE500D00E76 /* ContentView.swift */,
@@ -148,6 +196,106 @@
 				122BB1CB273EACE600D00E76 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		12D7791C27497302009F0DD5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				12D7791D27497302009F0DD5 /* Post */,
+				12D7792227497302009F0DD5 /* Notification */,
+				12D7792527497303009F0DD5 /* Comment */,
+				12D7792927497303009F0DD5 /* Search */,
+				12D7792C27497303009F0DD5 /* Profile */,
+				12D7792E27497303009F0DD5 /* Feed */,
+				12D7793127497303009F0DD5 /* Main */,
+				12D7793327497303009F0DD5 /* Authentication */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		12D7791D27497302009F0DD5 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				12D7791E27497302009F0DD5 /* TextArea.swift */,
+				12D7791F27497302009F0DD5 /* CreatePostView.swift */,
+				12D7792027497302009F0DD5 /* PostView.swift */,
+				12D7792127497302009F0DD5 /* CreateComView.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		12D7792227497302009F0DD5 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				12D7792327497302009F0DD5 /* NotificationCell.swift */,
+				12D7792427497303009F0DD5 /* NotificationView.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		12D7792527497303009F0DD5 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				12D7792627497303009F0DD5 /* CommentCellView.swift */,
+				12D7792727497303009F0DD5 /* CommentInputView.swift */,
+				12D7792827497303009F0DD5 /* CommentsView.swift */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		12D7792927497303009F0DD5 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				12D7792A27497303009F0DD5 /* SearchView.swift */,
+				12D7792B27497303009F0DD5 /* SearchBar.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		12D7792C27497303009F0DD5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				12D7792D27497303009F0DD5 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		12D7792E27497303009F0DD5 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				12D7792F27497303009F0DD5 /* FeedView.swift */,
+				12D7793027497303009F0DD5 /* FeedCell.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		12D7793127497303009F0DD5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				12D7793227497303009F0DD5 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		12D7793327497303009F0DD5 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				12D7793427497303009F0DD5 /* LoginView.swift */,
+				12D7793527497303009F0DD5 /* ForgotPasswordView.swift */,
+				12D7793627497303009F0DD5 /* RegisterView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		12D7794927497311009F0DD5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				12D7794A27497311009F0DD5 /* CustomSecureField.swift */,
+				12D7794B27497311009F0DD5 /* imagePicker.swift */,
+				12D7794C27497311009F0DD5 /* Extensions.swift */,
+				12D7794D27497311009F0DD5 /* CustomTextField.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		12F2F7BE2744EFA0003365C8 /* UploadPost */ = {
@@ -260,6 +408,7 @@
 				12FC56AE2742C14B00E1F653 /* FirebaseAuth */,
 				12FC56B02742C14B00E1F653 /* FirebaseFirestore */,
 				12FC56B22742C14B00E1F653 /* FirebaseDatabase */,
+				12D77953274973A4009F0DD5 /* Kingfisher */,
 			);
 			productName = "Reddit-Clone";
 			productReference = 122BB1C1273EACE500D00E76 /* Reddit-Clone.app */;
@@ -290,6 +439,7 @@
 			mainGroup = 122BB1B8273EACE500D00E76;
 			packageReferences = (
 				12FC56A72742C14B00E1F653 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				12D77952274973A3009F0DD5 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 122BB1C2273EACE500D00E76 /* Products */;
 			projectDirPath = "";
@@ -319,25 +469,47 @@
 			buildActionMask = 2147483647;
 			files = (
 				120EE44E274405E6005B2E32 /* CommentViewModel.swift in Sources */,
+				12D7794527497303009F0DD5 /* MainView.swift in Sources */,
+				12D7794F27497311009F0DD5 /* imagePicker.swift in Sources */,
 				120EE4442743AB37005B2E32 /* RedditGroup.swift in Sources */,
+				12D7793F27497303009F0DD5 /* CommentsView.swift in Sources */,
 				12F2F7C6274553D1003365C8 /* ImageUploader.swift in Sources */,
 				122BB1C7273EACE500D00E76 /* ContentView.swift in Sources */,
+				12D7793B27497303009F0DD5 /* NotificationCell.swift in Sources */,
 				12FC567B2742965F00E1F653 /* FeedCellViewModel.swift in Sources */,
 				120EE44227439C52005B2E32 /* SearchViewModel.swift in Sources */,
 				122BB1C5273EACE500D00E76 /* Reddit_CloneApp.swift in Sources */,
+				12D7794727497303009F0DD5 /* ForgotPasswordView.swift in Sources */,
+				12D7793C27497303009F0DD5 /* NotificationView.swift in Sources */,
+				12D7795027497311009F0DD5 /* Extensions.swift in Sources */,
 				12F2F7CB27458362003365C8 /* Message.swift in Sources */,
 				120EE45227441F53005B2E32 /* ProfileViewModel.swift in Sources */,
+				12D7795127497311009F0DD5 /* CustomTextField.swift in Sources */,
+				12D7794627497303009F0DD5 /* LoginView.swift in Sources */,
+				12D7794827497303009F0DD5 /* RegisterView.swift in Sources */,
 				120EE4462743DE33005B2E32 /* RedditSearchData.swift in Sources */,
+				12D7793927497303009F0DD5 /* PostView.swift in Sources */,
+				12D7793E27497303009F0DD5 /* CommentInputView.swift in Sources */,
+				12D7794027497303009F0DD5 /* SearchView.swift in Sources */,
 				12F2F7C327451894003365C8 /* GroupViewModel.swift in Sources */,
 				12F2F7C92745834E003365C8 /* MessageViewModel.swift in Sources */,
 				120EE45027441D8D005B2E32 /* UserCommentViewModel.swift in Sources */,
+				12D7793727497303009F0DD5 /* TextArea.swift in Sources */,
 				12FC56B62742C6C600E1F653 /* AuthViewModel.swift in Sources */,
+				12D7794427497303009F0DD5 /* FeedCell.swift in Sources */,
+				12D7794127497303009F0DD5 /* SearchBar.swift in Sources */,
+				12D7793D27497303009F0DD5 /* CommentCellView.swift in Sources */,
+				12D7793827497303009F0DD5 /* CreatePostView.swift in Sources */,
 				12FC567D274297D000E1F653 /* Post.swift in Sources */,
 				12FC56772742961C00E1F653 /* FeedViewModel.swift in Sources */,
 				12F2F7CE27458F04003365C8 /* Notification.swift in Sources */,
+				12D7794E27497311009F0DD5 /* CustomSecureField.swift in Sources */,
+				12D7793A27497303009F0DD5 /* CreateComView.swift in Sources */,
+				12D7794327497303009F0DD5 /* FeedView.swift in Sources */,
 				12F2F7D027458F20003365C8 /* NotificationViewModel.swift in Sources */,
 				120EE44C274401C8005B2E32 /* Comment.swift in Sources */,
 				12FC56722742882D00E1F653 /* User.swift in Sources */,
+				12D7794227497303009F0DD5 /* ProfileView.swift in Sources */,
 				12F2F7C02744EFBD003365C8 /* UploadPostViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,6 +699,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		12D77952274973A3009F0DD5 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.1;
+			};
+		};
 		12FC56A72742C14B00E1F653 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -538,6 +718,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		12D77953274973A4009F0DD5 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12D77952274973A3009F0DD5 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		12FC56A82742C14B00E1F653 /* FirebaseStorageSwift-Beta */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 12FC56A72742C14B00E1F653 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
