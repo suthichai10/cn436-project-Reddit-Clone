@@ -35,6 +35,9 @@ struct RegisterView: View {
                     CustomTextField(placeholder: Text("Email"), text: $email)
                         .padding()
                         .padding(.horizontal, 32)
+                    CustomTextField(placeholder: Text("FullName"), text: $fullname)
+                        .padding()
+                        .padding(.horizontal, 32)
                     CustomTextField(placeholder: Text("Username"), text: $username)
                         .padding()
                         .padding(.horizontal, 32)
@@ -48,15 +51,12 @@ struct RegisterView: View {
                     Text("Already a Redditor?")
                         .font(.system(size: 13, weight: .semibold))
                         .foregroundColor(.gray)
-                    NavigationLink(
-                        destination: LoginView().navigationBarHidden(true),
-                        label: {
+                    NavigationLink(destination: LoginView().navigationBarHidden(true)) {
                             Text("Log in")
                                 .font(.system(size: 14, weight: .semibold))
                                 .foregroundColor(.blue)
                                 .padding(.trailing, 28)
-                        }
-                    )
+                    }
                     
                     Spacer()
                 }
@@ -64,17 +64,17 @@ struct RegisterView: View {
                 
                 Spacer()
                 
-                Button {
-                    viewModel.register(withEmail: email, password: password, username: username, fullname: fullname)
-                } label: {
-                    Text("Continue")
+                NavigationLink(destination: LoginView().navigationBarHidden(true)) {
+                    Text("Register")
                         .font(.headline)
                         .foregroundColor(.white)
                         .frame(width: 360, height: 50)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .leading, endPoint: .trailing))
                         .clipShape(Capsule())
                         .padding()
-                }
+                }.onTapGesture {
+                    viewModel.register(withEmail: email, password: password, username: username, fullname: fullname)
+                }.disabled(email.isEmpty || username.isEmpty || fullname.isEmpty || password.isEmpty)
             }
         }
     }
