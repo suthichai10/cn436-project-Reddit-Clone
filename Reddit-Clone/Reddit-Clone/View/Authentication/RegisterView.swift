@@ -12,6 +12,7 @@ struct RegisterView: View {
     @State var username = ""
     @State var fullname = ""
     @State var password = ""
+    @State var goBackLoginPage = false
     
     @EnvironmentObject var viewModel: AuthViewModel
     
@@ -64,17 +65,21 @@ struct RegisterView: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: LoginView().navigationBarHidden(true)) {
-                    Text("Register")
+                Button(action: {
+                    viewModel.register(withEmail: email, password: password, username: username, fullname: fullname)
+                    goBackLoginPage = true
+                } , label : {
+                   Text("Register")
                         .font(.headline)
                         .foregroundColor(.white)
                         .frame(width: 360, height: 50)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .leading, endPoint: .trailing))
                         .clipShape(Capsule())
                         .padding()
-                }.onTapGesture {
-                    viewModel.register(withEmail: email, password: password, username: username, fullname: fullname)
-                }.disabled(email.isEmpty || username.isEmpty || fullname.isEmpty || password.isEmpty)
+                })
+                .disabled(email.isEmpty || username.isEmpty || fullname.isEmpty || password.isEmpty)
+                NavigationLink(destination: LoginView().navigationBarHidden(true),isActive: $goBackLoginPage) {
+                }
             }
         }
     }
