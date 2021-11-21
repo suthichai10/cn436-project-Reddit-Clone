@@ -34,7 +34,7 @@ struct CreatePostTextView: View {
                 Spacer()
                 
                 Button {
-                    viewModel.uploadUserPost(image: nil, caption: text)
+                    viewModel.uploadUserPost(caption: text)
                 } label: {
                     Text("Post")
                         .font(.headline)
