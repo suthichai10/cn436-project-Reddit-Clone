@@ -12,6 +12,7 @@ import FirebaseFirestoreSwift
 struct Comment : Decodable , Identifiable  {
     @DocumentID var id : String?
     let userID : String
+    let username : String
     let timestamp : Timestamp
     let commentText : String
     let postOwnerID : String
