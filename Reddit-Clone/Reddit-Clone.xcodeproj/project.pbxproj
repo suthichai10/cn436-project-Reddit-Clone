@@ -18,6 +18,11 @@
 		122BB1C7273EACE500D00E76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122BB1C6273EACE500D00E76 /* ContentView.swift */; };
 		122BB1C9273EACE600D00E76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 122BB1C8273EACE600D00E76 /* Assets.xcassets */; };
 		122BB1CC273EACE600D00E76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 122BB1CB273EACE600D00E76 /* Preview Assets.xcassets */; };
+		12C9BD5C274A0F8C004FDF5E /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C9BD5A274A0F8C004FDF5E /* SearchCell.swift */; };
+		12C9BD5D274A0F8C004FDF5E /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C9BD5B274A0F8C004FDF5E /* SearchListView.swift */; };
+		12C9BD60274A16FC004FDF5E /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C9BD5F274A16FC004FDF5E /* GroupView.swift */; };
+		12C9BD62274A1FBE004FDF5E /* CreatePostTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C9BD61274A1FBE004FDF5E /* CreatePostTextView.swift */; };
+		12C9BD64274A2304004FDF5E /* GroupCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C9BD63274A2304004FDF5E /* GroupCellViewModel.swift */; };
 		12D7793727497303009F0DD5 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7791E27497302009F0DD5 /* TextArea.swift */; };
 		12D7793827497303009F0DD5 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7791F27497302009F0DD5 /* CreatePostView.swift */; };
 		12D7793927497303009F0DD5 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7792027497302009F0DD5 /* PostView.swift */; };
@@ -76,6 +81,11 @@
 		122BB1C8273EACE600D00E76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		122BB1CB273EACE600D00E76 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		122BB1CD273EACE600D00E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12C9BD5A274A0F8C004FDF5E /* SearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		12C9BD5B274A0F8C004FDF5E /* SearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListView.swift; sourceTree = "<group>"; };
+		12C9BD5F274A16FC004FDF5E /* GroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
+		12C9BD61274A1FBE004FDF5E /* CreatePostTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreatePostTextView.swift; path = "../../../../แยกไว้ละกัน กันเปิดไม่ติดอีก/Post/CreatePostTextView.swift"; sourceTree = "<group>"; };
+		12C9BD63274A2304004FDF5E /* GroupCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCellViewModel.swift; sourceTree = "<group>"; };
 		12D7791E27497302009F0DD5 /* TextArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		12D7791F27497302009F0DD5 /* CreatePostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
 		12D7792027497302009F0DD5 /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
@@ -175,6 +185,7 @@
 		122BB1C3273EACE500D00E76 /* Reddit-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				12C9BD59274A0F8C004FDF5E /* Items */,
 				12D7794927497311009F0DD5 /* Utils */,
 				12D7791C27497302009F0DD5 /* View */,
 				12FC5670274287FF00E1F653 /* ViewModel */,
@@ -198,9 +209,29 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		12C9BD59274A0F8C004FDF5E /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				12C9BD5A274A0F8C004FDF5E /* SearchCell.swift */,
+				12C9BD5B274A0F8C004FDF5E /* SearchListView.swift */,
+			);
+			name = Items;
+			path = "../../แยกไว้ละกัน กันเปิดไม่ติดอีก/Items";
+			sourceTree = "<group>";
+		};
+		12C9BD5E274A16FC004FDF5E /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				12C9BD5F274A16FC004FDF5E /* GroupView.swift */,
+			);
+			name = Group;
+			path = "../../../แยกไว้ละกัน กันเปิดไม่ติดอีก/Group";
+			sourceTree = "<group>";
+		};
 		12D7791C27497302009F0DD5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				12C9BD5E274A16FC004FDF5E /* Group */,
 				12D7791D27497302009F0DD5 /* Post */,
 				12D7792227497302009F0DD5 /* Notification */,
 				12D7792527497303009F0DD5 /* Comment */,
@@ -216,6 +247,7 @@
 		12D7791D27497302009F0DD5 /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				12C9BD61274A1FBE004FDF5E /* CreatePostTextView.swift */,
 				12D7791E27497302009F0DD5 /* TextArea.swift */,
 				12D7791F27497302009F0DD5 /* CreatePostView.swift */,
 				12D7792027497302009F0DD5 /* PostView.swift */,
@@ -310,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				12F2F7C227451894003365C8 /* GroupViewModel.swift */,
+				12C9BD63274A2304004FDF5E /* GroupCellViewModel.swift */,
 			);
 			path = Group;
 			sourceTree = "<group>";
@@ -469,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				120EE44E274405E6005B2E32 /* CommentViewModel.swift in Sources */,
+				12C9BD5C274A0F8C004FDF5E /* SearchCell.swift in Sources */,
 				12D7794527497303009F0DD5 /* MainView.swift in Sources */,
 				12D7794F27497311009F0DD5 /* imagePicker.swift in Sources */,
 				120EE4442743AB37005B2E32 /* RedditGroup.swift in Sources */,
@@ -491,15 +525,19 @@
 				12D7793927497303009F0DD5 /* PostView.swift in Sources */,
 				12D7793E27497303009F0DD5 /* CommentInputView.swift in Sources */,
 				12D7794027497303009F0DD5 /* SearchView.swift in Sources */,
+				12C9BD5D274A0F8C004FDF5E /* SearchListView.swift in Sources */,
 				12F2F7C327451894003365C8 /* GroupViewModel.swift in Sources */,
 				12F2F7C92745834E003365C8 /* MessageViewModel.swift in Sources */,
 				120EE45027441D8D005B2E32 /* UserCommentViewModel.swift in Sources */,
+				12C9BD64274A2304004FDF5E /* GroupCellViewModel.swift in Sources */,
 				12D7793727497303009F0DD5 /* TextArea.swift in Sources */,
 				12FC56B62742C6C600E1F653 /* AuthViewModel.swift in Sources */,
+				12C9BD60274A16FC004FDF5E /* GroupView.swift in Sources */,
 				12D7794427497303009F0DD5 /* FeedCell.swift in Sources */,
 				12D7794127497303009F0DD5 /* SearchBar.swift in Sources */,
 				12D7793D27497303009F0DD5 /* CommentCellView.swift in Sources */,
 				12D7793827497303009F0DD5 /* CreatePostView.swift in Sources */,
+				12C9BD62274A1FBE004FDF5E /* CreatePostTextView.swift in Sources */,
 				12FC567D274297D000E1F653 /* Post.swift in Sources */,
 				12FC56772742961C00E1F653 /* FeedViewModel.swift in Sources */,
 				12F2F7CE27458F04003365C8 /* Notification.swift in Sources */,
