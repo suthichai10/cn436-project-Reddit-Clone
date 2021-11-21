@@ -13,7 +13,6 @@ struct CommentCellView: View {
     
     var body: some View {
         LazyVStack(alignment: .leading) {
-                     .resizeTo(width: 36, height: 36)
             VStack (alignment: .leading) {
                 HStack {
                     KFImage(URL(string: comment.profileImageURL))
@@ -30,9 +29,10 @@ struct CommentCellView: View {
                 }
                 Text(comment.commentText)
                         .foregroundColor(.gray)
-            .padding(.leading)
-            .padding(.leading)
+                        .padding(.leading)
+            }
+        }
     }
-
+}
 
 
