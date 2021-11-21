@@ -17,6 +17,7 @@ class AuthViewModel: ObservableObject {
     
     init() {
         userSession = Auth.auth().currentUser
+        fetchUser()
     }
     
     func signIn(withEmail email: String , password: String) {

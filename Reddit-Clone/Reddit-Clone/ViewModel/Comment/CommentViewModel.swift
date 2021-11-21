@@ -25,6 +25,7 @@ class CommentViewModel : ObservableObject {
         let data = [
             "comment" : comment,
             "userID" : userID,
+            "username" : user.username,
             "timestamp" : Timestamp(date:Date()),
             "ownerID" : post.ownerID,
             
