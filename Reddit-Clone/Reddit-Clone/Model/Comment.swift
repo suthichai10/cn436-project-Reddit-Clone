@@ -17,7 +17,7 @@ struct Comment : Decodable , Identifiable  {
     let commentText : String
     let postOwnerID : String
     
-    var profileImageURL : String
+    var profileImageURL : String?
     
     func timestampText() -> String {
         let formatter = DateComponentsFormatter()
