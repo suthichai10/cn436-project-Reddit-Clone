@@ -32,6 +32,7 @@ struct RegisterView: View {
                         .font(.system(size: 13, weight: .semibold))
                         .foregroundColor(.gray)
                 }
+                .padding()
                 VStack(spacing: -16) {
                     CustomTextField(placeholder: Text("Email"), text: $email)
                         .padding()

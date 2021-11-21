@@ -28,6 +28,7 @@ struct LoginView: View {
                             .font(.system(size: 13, weight: .semibold))
                             .foregroundColor(.gray)
                     }
+                    .padding()
                     VStack(spacing: -16) {
                         CustomTextField(placeholder: Text("Email"), text: $email)
                             .padding()
@@ -77,7 +78,7 @@ struct LoginView: View {
                     Button {
                         viewModel.signIn(withEmail: email, password: password)
                     } label: {
-                        Text("Login")
+                        Text("Continue")
                             .font(.headline)
                             .foregroundColor(.white)
                             .frame(width: 360, height: 50)
