@@ -22,7 +22,7 @@ struct ProfileView: View {
                                 .font(.system(size: 18, weight: .semibold))
                                 .foregroundColor(.white)
                                 .padding(.bottom, 3)
-                            Text("u/\(user.fullname)")
+                            Text("u/\(user.username)")
                                 .font(.system(size: 14))
                                 .foregroundColor(.white)
                                 .padding(.bottom, 3)

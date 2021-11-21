@@ -69,7 +69,7 @@ struct RegisterView: View {
                     viewModel.register(withEmail: email, password: password, username: username, fullname: fullname)
                     goBackLoginPage = true
                 } , label : {
-                   Text("Register")
+                   Text("Continue")
                         .font(.headline)
                         .foregroundColor(.white)
                         .frame(width: 360, height: 50)
