@@ -55,7 +55,7 @@ class GroupCellViewModel : ObservableObject {
     func fetchGroupPosts() {
         guard let groupID = group.id else { return }
         
-        Firestore.firestore().collection("posts").whereField("ownerID", isEqualTo: groupID).getDocuments { (snap,error) in
+        Firestore.firestore().collection("posts").whereField("groupID", isEqualTo: groupID).getDocuments { (snap,error) in
             if let error = error {
                 print(error.localizedDescription)
                 return

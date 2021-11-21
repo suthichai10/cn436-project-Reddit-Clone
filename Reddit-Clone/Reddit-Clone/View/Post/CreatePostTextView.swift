@@ -11,6 +11,8 @@ struct CreatePostTextView: View {
     @ObservedObject var viewModel : UploadPostViewModel
     @State var text = ""
     @State var selection: String?
+    var groupName : String? = ""
+    var groupID : String? = ""
     
     var body: some View {
         NavigationView {
@@ -34,7 +36,7 @@ struct CreatePostTextView: View {
                 Spacer()
                 
                 Button {
-                    viewModel.uploadUserPost(caption: text)
+                    viewModel.uploadPost(caption: text, groupID: groupID, groupName: groupName)
                 } label: {
                     Text("Post")
                         .font(.headline)
@@ -47,7 +49,7 @@ struct CreatePostTextView: View {
                 .disabled(text.isEmpty)
                 
                 NavigationLink(
-                    destination: PostView().navigationBarHidden(true),
+                    destination: PostView(viewModel:UploadPostViewModel(postType: viewModel.postType),groupName: "",groupID: "").navigationBarHidden(true),
                     label: {
                         Text("Go Back")
                             .font(.headline)

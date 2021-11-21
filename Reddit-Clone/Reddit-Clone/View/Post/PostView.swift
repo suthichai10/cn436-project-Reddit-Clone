@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct PostView: View {
-    @ObservedObject var viewModel = UploadPostViewModel()
+    @ObservedObject var viewModel : UploadPostViewModel
+    var groupName : String? = ""
+    var groupID : String? = ""
     var body: some View {
         NavigationView {
             VStack {
@@ -29,7 +31,7 @@ struct PostView: View {
                 Spacer()
                 
                 NavigationLink(
-                    destination: CreatePostView(viewModel:viewModel).navigationBarHidden(true),
+                    destination: CreatePostView(viewModel: viewModel, groupName: groupName, groupID: groupID ?? "").navigationBarHidden(true),
                     label: {
                         Text("Create a post")
                             .font(.headline)
@@ -42,7 +44,7 @@ struct PostView: View {
                 )
                 
                 NavigationLink(
-                    destination: CreatePostTextView(viewModel:viewModel).navigationBarHidden(true),
+                    destination: CreatePostTextView(viewModel:viewModel, groupName: groupName, groupID: groupID ?? "").navigationBarHidden(true),
                     label: {
                         Text("Create a post without picture")
                             .font(.headline)
@@ -68,11 +70,5 @@ struct PostView: View {
                 )
             }
         }
-    }
-}
-
-struct PostView_Previews: PreviewProvider {
-    static var previews: some View {
-        PostView()
     }
 }

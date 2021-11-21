@@ -56,7 +56,7 @@ struct ProfileView: View {
             LazyVStack {
                 HStack{
                     NavigationLink(
-                        destination: ProfileView().navigationBarHidden(true),
+                        destination: ProfileView(viewModel: viewModel).navigationBarHidden(true),
                         label: {
                             Text("Post")
                                 .font(.system(size: 20, weight: .semibold))
@@ -66,7 +66,7 @@ struct ProfileView: View {
                     )
                     Spacer()
                     NavigationLink(
-                        destination: ProfileCommentView().navigationBarHidden(true),
+                        destination: ProfileCommentView(viewModel:viewModel).navigationBarHidden(true),
                         label: {
                             Text("Comment")
                                 .font(.system(size: 20, weight: .semibold))
@@ -75,7 +75,7 @@ struct ProfileView: View {
                     )
                     Spacer()
                     NavigationLink(
-                        destination: ProfileView().navigationBarHidden(true),
+                        destination: ProfileAboutView(viewModel:viewModel).navigationBarHidden(true),
                         label: {
                             Text("About")
                                 .font(.system(size: 20, weight: .semibold))

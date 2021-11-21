@@ -19,7 +19,7 @@ class NotificationViewModel : ObservableObject {
     func fetchNotication() {
         guard let userID = AuthViewModel.shared.currentUser?.id else { return }
         
-        Firestore.firestore().collection("notifications").document(userID).collection("user-notifications").getDocuments { (snap , error) in
+        Firestore.firestore().collection("notifications").document(userID).collection("user-notifications").order(by:"timestamp" ,descending: true).getDocuments { (snap , error) in
             if let error = error {
                 print(error.localizedDescription)
                 return

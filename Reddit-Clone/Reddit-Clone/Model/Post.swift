@@ -16,9 +16,19 @@ struct Post: Decodable , Identifiable {
     let ownerID : String
     let ownerUsername : String
     
+    var timestamp : Timestamp
+    
     let groupID : String?
     let groupName : String?
     
     var user : User?
     var didLike : Bool? = false
+    
+    func timestampText() -> String {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [ .second , .minute , .hour , .day , .weekOfMonth]
+        formatter.maximumUnitCount = 1
+        formatter.unitsStyle = .abbreviated
+        return formatter.string(from: timestamp.dateValue() , to: Date()) ?? ""
+    }
 }

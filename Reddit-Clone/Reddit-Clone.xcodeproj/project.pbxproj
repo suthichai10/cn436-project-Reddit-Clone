@@ -24,6 +24,11 @@
 		12C9BD6C274A39EA004FDF5E /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C9BD6A274A39EA004FDF5E /* SearchListView.swift */; };
 		12C9BD6E274A3BD3004FDF5E /* CreatePostTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C9BD6D274A3BD3004FDF5E /* CreatePostTextView.swift */; };
 		12C9BD74274A58C7004FDF5E /* GroupFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C9BD73274A58C7004FDF5E /* GroupFeedView.swift */; };
+		12C9BD7F274A7F8D004FDF5E /* ProfileCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C9BD7B274A7F8D004FDF5E /* ProfileCommentView.swift */; };
+		12C9BD80274A7F8D004FDF5E /* ProflieCommentFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C9BD7C274A7F8D004FDF5E /* ProflieCommentFeed.swift */; };
+		12C9BD81274A7F8D004FDF5E /* ProfileAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C9BD7D274A7F8D004FDF5E /* ProfileAboutView.swift */; };
+		12C9BD82274A7F8D004FDF5E /* ProfileCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C9BD7E274A7F8D004FDF5E /* ProfileCommentCell.swift */; };
+		12C9BD84274A7F9E004FDF5E /* ProfileFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C9BD83274A7F9E004FDF5E /* ProfileFeedView.swift */; };
 		12D7793727497303009F0DD5 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7791E27497302009F0DD5 /* TextArea.swift */; };
 		12D7793827497303009F0DD5 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7791F27497302009F0DD5 /* CreatePostView.swift */; };
 		12D7793927497303009F0DD5 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7792027497302009F0DD5 /* PostView.swift */; };
@@ -88,6 +93,11 @@
 		12C9BD6A274A39EA004FDF5E /* SearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListView.swift; sourceTree = "<group>"; };
 		12C9BD6D274A3BD3004FDF5E /* CreatePostTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostTextView.swift; sourceTree = "<group>"; };
 		12C9BD73274A58C7004FDF5E /* GroupFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedView.swift; sourceTree = "<group>"; };
+		12C9BD7B274A7F8D004FDF5E /* ProfileCommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCommentView.swift; sourceTree = "<group>"; };
+		12C9BD7C274A7F8D004FDF5E /* ProflieCommentFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProflieCommentFeed.swift; sourceTree = "<group>"; };
+		12C9BD7D274A7F8D004FDF5E /* ProfileAboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAboutView.swift; sourceTree = "<group>"; };
+		12C9BD7E274A7F8D004FDF5E /* ProfileCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCommentCell.swift; sourceTree = "<group>"; };
+		12C9BD83274A7F9E004FDF5E /* ProfileFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFeedView.swift; sourceTree = "<group>"; };
 		12D7791E27497302009F0DD5 /* TextArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		12D7791F27497302009F0DD5 /* CreatePostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
 		12D7792027497302009F0DD5 /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
@@ -288,7 +298,12 @@
 		12D7792C27497303009F0DD5 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				12C9BD7D274A7F8D004FDF5E /* ProfileAboutView.swift */,
+				12C9BD7E274A7F8D004FDF5E /* ProfileCommentCell.swift */,
+				12C9BD7B274A7F8D004FDF5E /* ProfileCommentView.swift */,
+				12C9BD7C274A7F8D004FDF5E /* ProflieCommentFeed.swift */,
 				12D7792D27497303009F0DD5 /* ProfileView.swift */,
+				12C9BD83274A7F9E004FDF5E /* ProfileFeedView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -502,11 +517,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12C9BD81274A7F8D004FDF5E /* ProfileAboutView.swift in Sources */,
 				120EE44E274405E6005B2E32 /* CommentViewModel.swift in Sources */,
 				12D7794527497303009F0DD5 /* MainView.swift in Sources */,
 				12D7794F27497311009F0DD5 /* imagePicker.swift in Sources */,
 				120EE4442743AB37005B2E32 /* RedditGroup.swift in Sources */,
 				12D7793F27497303009F0DD5 /* CommentsView.swift in Sources */,
+				12C9BD82274A7F8D004FDF5E /* ProfileCommentCell.swift in Sources */,
+				12C9BD80274A7F8D004FDF5E /* ProflieCommentFeed.swift in Sources */,
 				12C9BD74274A58C7004FDF5E /* GroupFeedView.swift in Sources */,
 				12F2F7C6274553D1003365C8 /* ImageUploader.swift in Sources */,
 				122BB1C7273EACE500D00E76 /* ContentView.swift in Sources */,
@@ -518,12 +536,14 @@
 				12C9BD6C274A39EA004FDF5E /* SearchListView.swift in Sources */,
 				12C9BD6E274A3BD3004FDF5E /* CreatePostTextView.swift in Sources */,
 				12D7793C27497303009F0DD5 /* NotificationView.swift in Sources */,
+				12C9BD7F274A7F8D004FDF5E /* ProfileCommentView.swift in Sources */,
 				12D7795027497311009F0DD5 /* Extensions.swift in Sources */,
 				12F2F7CB27458362003365C8 /* Message.swift in Sources */,
 				120EE45227441F53005B2E32 /* ProfileViewModel.swift in Sources */,
 				12D7795127497311009F0DD5 /* CustomTextField.swift in Sources */,
 				12D7794627497303009F0DD5 /* LoginView.swift in Sources */,
 				12D7794827497303009F0DD5 /* RegisterView.swift in Sources */,
+				12C9BD84274A7F9E004FDF5E /* ProfileFeedView.swift in Sources */,
 				120EE4462743DE33005B2E32 /* RedditSearchData.swift in Sources */,
 				12D7793927497303009F0DD5 /* PostView.swift in Sources */,
 				12D7793E27497303009F0DD5 /* CommentInputView.swift in Sources */,

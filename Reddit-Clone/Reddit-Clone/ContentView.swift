@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var viewModel : AuthViewModel
+    @EnvironmentObject var searchViewModel : SearchViewModel
     @State var selectedIndex = 0
     var body: some View {
         Group {
@@ -17,6 +18,7 @@ struct ContentView: View {
             } else {
                 if let user = viewModel.currentUser {
                     MainView(user: user, selectedIndex: $selectedIndex)
+                        .environmentObject(searchViewModel)
                 }
             }
         }

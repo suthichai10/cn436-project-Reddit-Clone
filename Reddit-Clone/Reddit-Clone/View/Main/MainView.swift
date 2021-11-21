@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     @State var user: User
     @Binding var selectedIndex: Int
-    
+    @EnvironmentObject var searchViewModel : SearchViewModel
     var body: some View {
         NavigationView {
             TabView(selection: $selectedIndex) {
@@ -22,13 +22,14 @@ struct MainView: View {
                     .tag(0)
                 
                 SearchView()
+                    .environmentObject(searchViewModel)
                     .onTapGesture {
                         selectedIndex = 1
                     }
                     .tabItem { Image(systemName: "magnifyingglass") }
                     .tag(1)
                 
-                PostView()
+                PostView(viewModel:UploadPostViewModel(postType: .user),groupName: "" ,groupID: "")
                     .onTapGesture {
                         selectedIndex = 2
                     }

@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct ProfileCommentCell: View {
-    @ObservedObject var viewModel : UserCommentViewModel
+    var comment : Comment
     
     var body: some View {
         
         LazyVStack(alignment: .leading) {
             VStack(alignment: .leading) {
-                Text(viewModel.comment.username)
+                Text(comment.username)
                     .font(.system(size: 18, weight: .semibold))
-                Text("\(viewModel.comment.timestamp)")
-                Text(viewModel.comment.commentText)
+                Text(comment.timestampText())
+                Text(comment.commentText)
             }
             .padding(.leading, 10)
         }

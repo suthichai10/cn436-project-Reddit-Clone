@@ -51,7 +51,7 @@ struct CreateComView: View {
                 .disabled(name.isEmpty || description.isEmpty)
                 
                 NavigationLink(
-                    destination: PostView().navigationBarHidden(true),
+                    destination: PostView(viewModel:UploadPostViewModel(postType: .user),groupName: "" , groupID: "").navigationBarHidden(true),
                     label: {
                         Text("Go Back")
                             .font(.headline)

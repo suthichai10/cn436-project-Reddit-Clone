@@ -18,6 +18,7 @@ struct Reddit_CloneApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(AuthViewModel.shared)
+                .environmentObject(SearchViewModel())
         }
     }
 }

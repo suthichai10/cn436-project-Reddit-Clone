@@ -8,26 +8,40 @@
 import SwiftUI
 
 struct SearchView: View {
-    @ObservedObject var viewModel = SearchViewModel()
+    @EnvironmentObject var viewModel: SearchViewModel
+    //@ObservedObject var viewModel = SearchViewModel()
     
     @State var searchText = ""
     @State var inSearchMode = false
     var body: some View {
-        ScrollView {
-            SearchBar(text: $searchText, isEditing: $inSearchMode)
-                .padding()
+        //ScrollView {
             
-            ZStack {
-                if inSearchMode {
-                    SearchListView(viewModel: viewModel, searchText: $searchText)
+         //   SearchBar(text: $searchText, isEditing: $inSearchMode)
+          //      .padding()
+            
+           // ZStack {
+            //    if inSearchMode {
+             //       SearchListView(viewModel: viewModel, searchText: $searchText)
+             //   }
+          //  }
+        //}
+        ScrollView {
+            LazyVStack {
+                ForEach(0..<viewModel.data.count) { index in
+                    switch viewModel.data[index] {
+                    case .RedditUser(user: let user):
+                        NavigationLink(destination: ProfileView(viewModel: ProfileViewModel(user:user))) {
+                            SearchCell(data:viewModel.data[index])
+                        }
+                    case .RedditGroup(group: let group) :
+                        NavigationLink(destination: GroupView(groupCell: GroupCellViewModel(group: group))) {
+                            SearchCell(data:viewModel.data[index])
+                        }
+                    }
+                    Divider()
                 }
             }
         }
     }
 }
 
-struct SearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchView()
-    }
-}

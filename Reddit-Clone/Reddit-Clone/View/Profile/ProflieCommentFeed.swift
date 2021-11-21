@@ -14,7 +14,7 @@ struct ProflieCommentFeed: View {
         ScrollView {
             LazyVStack {
                 ForEach(viewModel.comments) { comment in
-                    ProfileCommentCell(viewModel: UserCommentViewModel(comment: comment))
+                    ProfileCommentCell(comment: comment)
                     Divider()
                      .frame(height: 2)
                      .background(Color.gray)

@@ -14,6 +14,8 @@ struct CreatePostView: View {
     @State var imagePickerPresented = false
     @State var selection: String?
     @ObservedObject var viewModel : UploadPostViewModel
+    var groupName : String? = ""
+    var groupID : String? = ""
     
     var body: some View {
         if postImage == nil {
@@ -45,7 +47,7 @@ struct CreatePostView: View {
                 }
                 
                 NavigationLink(
-                    destination: PostView().navigationBarHidden(true),
+                    destination: PostView(viewModel: UploadPostViewModel(postType: viewModel.postType)).navigationBarHidden(true),
                     label: {
                         Text("Go Back")
                             .font(.headline)
@@ -70,7 +72,7 @@ struct CreatePostView: View {
                 
                 Button {
                     if let image = selectedImage {
-                        viewModel.uploadUserPost(image: image, caption: captionText)
+                        viewModel.uploadPost(image: image, caption: captionText, groupID: groupID, groupName: groupName)
                         captionText = ""
                         postImage = nil
                     }

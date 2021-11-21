@@ -23,12 +23,19 @@ struct FeedCell: View {
                     .clipShape(Circle())
                 VStack(alignment: .leading) {
                     if let groupName = viewModel.post.groupName {
-                        Text("r/\(groupName)")
-                            .font(.system(size: 18, weight: .semibold))
+                        HStack {
+                            Text("r/\(groupName)")
+                                .font(.system(size: 18, weight: .semibold))
+                            Text(viewModel.post.timestampText())
+                        }
                         Text("Posted By u/\(viewModel.post.ownerUsername)")
                     } else {
-                        Text("u/\(viewModel.post.ownerUsername)")
-                            .font(.system(size: 18, weight: .semibold))
+                        HStack {
+                            Text("u/\(viewModel.post.ownerUsername)")
+                                .font(.system(size: 18, weight: .semibold))
+                            Text(viewModel.post.timestampText())
+                        }
+                        
                     }
 
                 }
@@ -63,6 +70,7 @@ struct FeedCell: View {
                     Image(systemName: "plus.message")
                         .resizeTo(width: 25, height: 25)
                         .font(.system(size: 20))
+                        .foregroundColor(.black)
                         .padding(.leading, 5)
                     Text("Comment")
                         .padding(.trailing, 35)
@@ -71,6 +79,7 @@ struct FeedCell: View {
                 Image(systemName: "square.and.arrow.up")
                     .resizeTo(width: 23, height: 23)
                     .font(.system(size: 20))
+                    .foregroundColor(.black)
                     .padding(.leading, 5)
                 Text("Share")
                 

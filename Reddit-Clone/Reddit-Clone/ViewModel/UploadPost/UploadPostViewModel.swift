@@ -10,7 +10,22 @@ import Firebase
 import FirebaseFirestoreSwift
 
 class UploadPostViewModel : ObservableObject {
-        
+    
+    let postType : PostType
+    
+    init(postType : PostType) {
+        self.postType = postType
+    }
+    
+    func uploadPost(image:UIImage?=nil , caption:String , groupID:String? = nil, groupName:String? = nil) {
+        switch postType {
+        case .user:
+            uploadUserPost(image: image ,caption: caption)
+        case .group :
+            uploadGroupPost(image: image,groupID: groupID ?? "" ,groupName: groupName ?? "" ,caption: caption)
+        }
+    }
+    
     func uploadUserPost(image: UIImage? = nil , caption: String) {
         guard let user = AuthViewModel.shared.currentUser else { return }
         guard let userID = user.id else { return }
@@ -80,6 +95,6 @@ class UploadPostViewModel : ObservableObject {
 }
 
 enum PostType {
-    case user(UIImage ,String)
-    case group(UIImage ,String , String , String)
+    case user
+    case group
 }
