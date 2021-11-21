@@ -55,12 +55,16 @@ struct FeedCell: View {
                 }
                 Text("\(viewModel.post.likes)")
                     .padding(.trailing, 50)
-                Image(systemName: "plus.message")
-                    .resizeTo(width: 25, height: 25)
-                    .font(.system(size: 20))
-                    .padding(.leading, 5)
-                Text("Comment")
-                    .padding(.trailing, 35)
+ 
+                NavigationLink(destination: CommentsView(post:viewModel.post)) {
+                    Image(systemName: "plus.message")
+                        .resizeTo(width: 25, height: 25)
+                        .font(.system(size: 20))
+                        .padding(.leading, 5)
+                    Text("Comment")
+                        .padding(.trailing, 35)
+                }
+                
                 Image(systemName: "square.and.arrow.up")
                     .resizeTo(width: 23, height: 23)
                     .font(.system(size: 20))
