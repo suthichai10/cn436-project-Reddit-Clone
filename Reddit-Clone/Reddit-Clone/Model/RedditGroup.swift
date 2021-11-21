@@ -15,9 +15,9 @@ struct RedditGroup: Decodable , Identifiable {
     var description : String
     var groupImageURL : String?
     var backgroundImageURL : String?
-    var followers : [User]?
+    var user_followers : [User]?
     
-    var groupStat : GroupStat
+    var groupStat : GroupStat?
     
     var didFollow: Bool? = false
 }
