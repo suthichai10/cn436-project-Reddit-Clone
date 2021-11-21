@@ -16,7 +16,7 @@ struct FeedCell: View {
     
     var body: some View {
         
-        VStack(alignment: .leading){
+        LazyVStack(alignment: .leading){
             HStack {
                 Image("reddit-top")
                     .resizeTo(width: 36, height: 36)
