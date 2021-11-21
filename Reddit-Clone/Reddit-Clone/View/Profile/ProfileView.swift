@@ -31,6 +31,17 @@ struct ProfileView: View {
                                 .padding(.bottom, 3)
                         }
                     }
+                    Button {
+                        didFollow ? viewModel.unfollow() : viewModel.follow()
+                    } label: {
+                        Text(didFollow ? "Following" : "Follow")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .frame(width: 80, height: 50)
+                            .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .leading, endPoint: .trailing))
+                            .clipShape(Capsule())
+                            .padding(.trailing, 2)
+                    }
                 }
                 .padding()
             }
