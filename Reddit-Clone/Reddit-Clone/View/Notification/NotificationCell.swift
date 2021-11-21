@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NotificationCell: View {
-    @ObservedObject var viewModel : NotificationViewModel
+    var notification : Notification
     
     var body: some View {
         
@@ -19,24 +19,18 @@ struct NotificationCell: View {
                     .clipShape(Circle())
                 VStack(alignment: .leading) {
                     HStack {
-                        Text("r/pernona")
+                        Text("u/\(notification.username)")
                             .font(.system(size: 16, weight: .semibold))
-                        Text("- 2h")
+                        Text(notification.timestampText())
                             .foregroundColor(.gray)
                             .font(.system(size: 16))
                     }
-                    Text("Im die thank forever")
+                    Text(notification.type.notificationMessage)
                         .foregroundColor(.gray)
                         .font(.system(size: 14))
                 }
             }
             .padding(.leading, 20)
         }
-    }
-}
-
-struct NotificationCell_Previews: PreviewProvider {
-    static var previews: some View {
-        NotificationCell(viewModel: NotificationViewModel())
     }
 }

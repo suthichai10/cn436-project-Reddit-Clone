@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct CreateComView: View {
-    @State var email = ""
+    @ObservedObject var viewModel = GroupViewModel()
+    @State var name = ""
+    @State var description = ""
     
     var body: some View {
         NavigationView {
@@ -24,7 +26,10 @@ struct CreateComView: View {
                         .padding(.bottom, 10)
                 }
                 VStack(spacing: -16) {
-                    CustomTextField(placeholder: Text("r/Community_name"), text: $email)
+                    CustomTextField(placeholder: Text("r/Community_name"), text: $name)
+                        .padding()
+                        .padding(.horizontal, 32)
+                    CustomTextField(placeholder: Text("description"), text: $description)
                         .padding()
                         .padding(.horizontal, 32)
                 }
@@ -33,16 +38,17 @@ struct CreateComView: View {
                 Spacer()
                 
                 Button {
+                    viewModel.createGroup(groupname: name, description: description)
                 } label: {
                     Text("Create Community")
                         .font(.headline)
                         .foregroundColor(.white)
                         .frame(width: 360, height: 50)
-                        .background(check ? LinearGradient(gradient: Gradient(colors: [Color.gray, Color.gray]), startPoint: .leading, endPoint: .trailing) : LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .leading, endPoint: .trailing))
+                        .background((name.isEmpty || description.isEmpty) ? LinearGradient(gradient: Gradient(colors: [Color.gray, Color.gray]), startPoint: .leading, endPoint: .trailing) : LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .leading, endPoint: .trailing))
                         .clipShape(Capsule())
                         .padding()
                 }
-                .disabled(check)
+                .disabled(name.isEmpty || description.isEmpty)
                 
                 NavigationLink(
                     destination: PostView().navigationBarHidden(true),
@@ -58,19 +64,5 @@ struct CreateComView: View {
                 )
             }
         }
-    }
-    
-    var check : Bool {
-        if email == "" {
-            return true
-        } else {
-            return false
-        }
-    }
-}
-
-struct CreateComView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateComView()
     }
 }

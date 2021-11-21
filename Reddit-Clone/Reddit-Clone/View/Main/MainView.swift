@@ -35,7 +35,7 @@ struct MainView: View {
                     .tabItem { Image(systemName: "plus") }
                     .tag(2)
                 
-                ProfileView(user: user)
+                ProfileView(viewModel: ProfileViewModel(user:user))
                     .onTapGesture {
                         selectedIndex = 3
                     }

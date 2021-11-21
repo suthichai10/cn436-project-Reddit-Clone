@@ -14,9 +14,8 @@ struct NotificationView: View {
         ScrollView {
             LazyVStack {
                 ForEach(viewModel.notification) { noti in
-                    //NotificationCell()
-                    //Divider()
-                    //FeedCell(viewModel: FeedCellViewModel(post: post))
+                    NotificationCell(notification: noti)
+                    Divider()
                 }
             }
         }

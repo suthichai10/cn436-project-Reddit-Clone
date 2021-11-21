@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @State var user : User
+    @ObservedObject var viewModel : ProfileViewModel
+    var didFollow : Bool {
+        viewModel.user.didFollow ?? false
+    }
     var body: some View {
         VStack {
             LazyVStack {
@@ -18,30 +21,15 @@ struct ProfileView: View {
                             Image("reddit-top")
                                 .resizeTo(width: 90, height: 90)
                                 .clipShape(Circle())
-                            Text("\(user.fullname)")
+                            Text("\(viewModel.user.fullname)")
                                 .font(.system(size: 18, weight: .semibold))
                                 .foregroundColor(.white)
                                 .padding(.bottom, 3)
-                            Text("u/\(user.username)")
+                            Text("u/\(viewModel.user.username)")
                                 .font(.system(size: 14))
                                 .foregroundColor(.white)
                                 .padding(.bottom, 3)
                         }
-                        
-                        Spacer()
-                        
-                        NavigationLink(
-                            destination: RegisterView().navigationBarHidden(true),
-                            label: {
-                                Text("Edit")
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                                    .frame(width: 80, height: 50)
-                                    .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .leading, endPoint: .trailing))
-                                    .clipShape(Capsule())
-                                    .padding()
-                            }
-                        )
                     }
                 }
                 .padding()

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PostView: View {
-
+    @ObservedObject var viewModel = UploadPostViewModel()
     var body: some View {
         NavigationView {
             VStack {
@@ -29,9 +29,22 @@ struct PostView: View {
                 Spacer()
                 
                 NavigationLink(
-                    destination: CreatePostView().navigationBarHidden(true),
+                    destination: CreatePostView(viewModel:viewModel).navigationBarHidden(true),
                     label: {
                         Text("Create a post")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .frame(width: 360, height: 50)
+                            .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .leading, endPoint: .trailing))
+                            .clipShape(Capsule())
+                            .padding()
+                    }
+                )
+                
+                NavigationLink(
+                    destination: CreatePostTextView(viewModel:viewModel).navigationBarHidden(true),
+                    label: {
+                        Text("Create a post without picture")
                             .font(.headline)
                             .foregroundColor(.white)
                             .frame(width: 360, height: 50)

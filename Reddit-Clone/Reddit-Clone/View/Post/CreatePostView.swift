@@ -13,14 +13,7 @@ struct CreatePostView: View {
     @State var captionText = ""
     @State var imagePickerPresented = false
     @State var selection: String?
-    //@ObservedObject var viewModel = UploadPostViewModel(postType: )
-    
-    let names = [
-            "r/com",
-            "r/com1",
-            "r/com2",
-            "r/com3"
-        ]
+    @ObservedObject var viewModel : UploadPostViewModel
     
     var body: some View {
         if postImage == nil {
@@ -31,14 +24,6 @@ struct CreatePostView: View {
                 Text("Upload Post with Picture")
                     .font(.system(size: 24, weight: .semibold))
                     .padding(.bottom, 10)
-                
-                NavigationView {
-                            List(names, id: \.self, selection: $selection) { name in
-                                Text(name)
-                            }
-                            .navigationBarHidden(true)
-                            .padding()
-                        }
                 
                 Spacer()
                 
@@ -84,6 +69,11 @@ struct CreatePostView: View {
                 .padding()
                 
                 Button {
+                    if let image = selectedImage {
+                        viewModel.uploadUserPost(image: image, caption: captionText)
+                        captionText = ""
+                        postImage = nil
+                    }
                 } label: {
                     Text("Post")
                         .font(.headline)
@@ -100,11 +90,5 @@ struct CreatePostView: View {
     func loadImage() {
         guard let selectedImage = selectedImage else { return }
         postImage = Image(uiImage: selectedImage)
-    }
-}
-
-struct CreatePostView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreatePostView()
     }
 }
