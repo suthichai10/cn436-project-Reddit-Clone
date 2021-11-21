@@ -11,11 +11,13 @@ import FirebaseFirestoreSwift
 
 class ProfileViewModel: ObservableObject {
     @Published var user : User
+    @Published var posts = [Post]()
     
     init(user: User) {
         self.user = user
         fetchUserFollower()
         fetchUserGroup()
+        fetchUserPosts()
         checkFollow()
         checkStat()
     }
@@ -173,4 +175,20 @@ class ProfileViewModel: ObservableObject {
         }
     }
     
+    func fetchUserPosts() {
+        guard let userID = user.id else { return }
+        
+        Firestore.firestore().collection("posts").whereField("ownerID", isEqualTo: userID).getDocuments { (snap,error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            
+            guard let documents = snap?.documents else { return }
+            
+            self.posts = documents.compactMap {
+                try? $0.data(as: Post.self)
+            }
+        }
+    }
 }

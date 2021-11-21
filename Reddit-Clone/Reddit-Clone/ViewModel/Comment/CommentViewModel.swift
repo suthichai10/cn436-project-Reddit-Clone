@@ -28,6 +28,7 @@ class CommentViewModel : ObservableObject {
             "username" : user.username,
             "timestamp" : Timestamp(date:Date()),
             "ownerID" : post.ownerID,
+            "profileImageURL" : user.profileImageURL as Any
             
         ] as [String : Any]
         

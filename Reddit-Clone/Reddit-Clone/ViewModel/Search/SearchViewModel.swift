@@ -14,10 +14,6 @@ import FirebaseFirestoreSwift
 class SearchViewModel : ObservableObject {
     @Published var data = [Data]()
     
-    enum Data {
-        case RedditUser(user : User)
-        case RedditGroup(group: RedditGroup)
-    }
     
     init() {
         fetchData()
@@ -63,5 +59,10 @@ class SearchViewModel : ObservableObject {
         }
     }
     
+}
+
+enum Data {
+    case RedditUser(user : User)
+    case RedditGroup(group: RedditGroup)
 }
 

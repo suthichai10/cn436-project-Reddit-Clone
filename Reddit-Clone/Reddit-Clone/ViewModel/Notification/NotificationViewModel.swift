@@ -12,6 +12,10 @@ import FirebaseFirestoreSwift
 class NotificationViewModel : ObservableObject {
     @Published var notification = [Notification]()
     
+    init() {
+        fetchNotication()
+    }
+    
     func fetchNotication() {
         guard let userID = AuthViewModel.shared.currentUser?.id else { return }
         
