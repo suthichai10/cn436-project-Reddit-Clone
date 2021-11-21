@@ -92,7 +92,6 @@ struct ProfileCommentView: View {
             ProflieCommentFeed()
             
         }
-        .navigationBarHidden(true)
     }
 }
 

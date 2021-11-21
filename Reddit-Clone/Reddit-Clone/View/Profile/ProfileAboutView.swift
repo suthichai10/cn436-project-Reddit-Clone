@@ -122,6 +122,5 @@ struct ProfileAboutView: View {
             Spacer()
             
         }
-        .navigationBarHidden(true)
     }
 }
