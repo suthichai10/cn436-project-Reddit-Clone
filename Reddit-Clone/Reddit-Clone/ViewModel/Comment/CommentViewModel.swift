@@ -23,12 +23,11 @@ class CommentViewModel : ObservableObject {
         guard let userID = user.id else { return }
         
         let data = [
-            "comment" : comment,
+            "commentText" : comment,
             "userID" : userID,
             "username" : user.username,
             "timestamp" : Timestamp(date:Date()),
-            "ownerID" : post.ownerID,
-            "profileImageURL" : user.profileImageURL as Any
+            "postOwnerID" : post.ownerID
             
         ] as [String : Any]
         

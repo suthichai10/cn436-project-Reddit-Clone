@@ -82,7 +82,7 @@ class GroupCellViewModel : ObservableObject {
             "fullname" : user.fullname
         ]
         
-        Firestore.firestore().collection("groups-following").document(groupID).collection("user-following").document(userID).setData(data) { error in
+        Firestore.firestore().collection("group-following").document(groupID).collection("user-following").document(userID).setData(data) { error in
             if let error = error {
                 print(error.localizedDescription)
                 return
@@ -108,7 +108,7 @@ class GroupCellViewModel : ObservableObject {
         guard let userID = user.id else { return }
         guard let groupID = group.id else { return }
         
-        Firestore.firestore().collection("groups-following").document(groupID).collection("user-following").document(userID).delete() { error in
+        Firestore.firestore().collection("group-following").document(groupID).collection("user-following").document(userID).delete() { error in
             if let error = error {
                 print(error.localizedDescription)
                 return
