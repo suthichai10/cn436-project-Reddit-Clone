@@ -23,7 +23,7 @@ struct CreatePostTextView: View {
                 .padding(.bottom, 24)
                 
                 VStack {
-                    Text("Community Name")
+                    Text("Post")
                         .font(.system(size: 24, weight: .semibold))
                         .padding(.bottom, 10)
                 }
