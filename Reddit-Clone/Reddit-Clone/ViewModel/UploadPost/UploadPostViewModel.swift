@@ -11,7 +11,7 @@ import FirebaseFirestoreSwift
 
 class UploadPostViewModel : ObservableObject {
         
-    func uploadUserPost(image: UIImage? , caption: String) {
+    func uploadUserPost(image: UIImage? = nil , caption: String) {
         guard let user = AuthViewModel.shared.currentUser else { return }
         guard let userID = user.id else { return }
         
@@ -25,16 +25,23 @@ class UploadPostViewModel : ObservableObject {
         
         if let image = image {
             ImageUploader.uploadImage(image:image , type:.post) { imageURL in
-                data.updateValue(imageURL , forKey: "imageURL")
+                data["imageURL"] = imageURL
+                Firestore.firestore().collection("posts").addDocument(data: data) { error in
+                    if let error = error {
+                        print(error.localizedDescription)
+                        return
+                    }
+                }
+            }
+        } else {
+            Firestore.firestore().collection("posts").addDocument(data: data) { error in
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
             }
         }
         
-        Firestore.firestore().collection("posts").addDocument(data: data) { error in
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-        }
     }
     
     func uploadGroupPost(image: UIImage?, groupID: String , groupName: String ,caption: String) {
@@ -52,18 +59,23 @@ class UploadPostViewModel : ObservableObject {
         ] as [String : Any]
         
         if let image = image {
-            ImageUploader.uploadImage(image:image,type: .post) { imageURL in
-                data.updateValue(imageURL, forKey: "imageURL")
+            ImageUploader.uploadImage(image:image , type:.post) { imageURL in
+                data["imageURL"] = imageURL
+                Firestore.firestore().collection("posts").addDocument(data: data) { error in
+                    if let error = error {
+                        print(error.localizedDescription)
+                        return
+                    }
+                }
+            }
+        } else {
+            Firestore.firestore().collection("posts").addDocument(data: data) { error in
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
             }
         }
-        
-        Firestore.firestore().collection("posts").addDocument(data: data) { error in
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-        }
-        
     }
 }
 

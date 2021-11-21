@@ -14,6 +14,7 @@ class FeedCellViewModel: ObservableObject {
     
     init(post : Post) {
         self.post = post
+        checkLike()
     }
     
     func like() {
@@ -22,7 +23,7 @@ class FeedCellViewModel: ObservableObject {
         }
         guard let postID = post.id else { return }
         guard let userID = AuthViewModel.shared.userSession?.uid else { return }
-        Firestore.firestore().collection("posts").document(postID).setData([:]) { error in
+        Firestore.firestore().collection("posts").document(postID).collection("posts-likes").document(userID).setData([:]) { error in
             if let error = error {
                 print(error.localizedDescription)
                 return
@@ -55,12 +56,12 @@ class FeedCellViewModel: ObservableObject {
         }
         guard let postID = post.id else { return }
         guard let userID = AuthViewModel.shared.userSession?.uid else { return }
-        Firestore.firestore().collection("posts").document(postID).setData([:]) { error in
+        Firestore.firestore().collection("posts").document(postID).collection("posts-likes").document(userID).delete() { error in
             if let error = error {
                 print(error.localizedDescription)
                 return
             }
-            Firestore.firestore().collection("users").document(userID).collection("user-likes").document(postID).setData([:]) { error in
+            Firestore.firestore().collection("users").document(userID).collection("user-likes").document(postID).delete() { error in
                 if let error = error {
                     print(error.localizedDescription)
                     return
@@ -77,6 +78,21 @@ class FeedCellViewModel: ObservableObject {
                 self.post.likes -= 1
                 self.post.didLike = false
             }
+        }
+    }
+    
+    func checkLike() {
+        guard let postID = post.id else { return }
+        guard let userID = AuthViewModel.shared.currentUser?.id else { return }
+        
+        Firestore.firestore().collection("posts").document(postID).collection("posts-likes").document(userID).getDocument { (snap , error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            
+            guard let didLike = snap?.exists else { return }
+            self.post.didLike = didLike
         }
     }
 }
