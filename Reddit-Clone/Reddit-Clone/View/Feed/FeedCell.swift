@@ -38,10 +38,13 @@ struct FeedCell: View {
             Text(viewModel.post.caption)
                 .font(.system(size: 18, weight: .semibold))
                 .padding(.leading, 5)
-            Image(viewModel.post.imageURL ?? "") // default image
-                .resizable()
-                .scaledToFit()
-                .clipped()
+            if let image = viewModel.post.imageURL {
+                KFImage(URL(string: image))
+                    .resizable()
+                    .scaledToFit()
+                    .clipped()
+            }
+
             
             HStack {
                 Button {
