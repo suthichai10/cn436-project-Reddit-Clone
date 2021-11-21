@@ -93,7 +93,6 @@ struct ProfileView: View {
             
             ProfileFeedView(viewModel:viewModel)
         }
-        .navigationBarHidden(true)
         
         
         

@@ -26,6 +26,8 @@ struct SearchView: View {
           //  }
         //}
         ScrollView {
+            SearchBar(text: $searchText, isEditing: $inSearchMode)
+                   .padding()
             LazyVStack {
                 ForEach(0..<viewModel.data.count) { index in
                     switch viewModel.data[index] {
