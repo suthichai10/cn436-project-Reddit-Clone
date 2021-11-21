@@ -15,18 +15,22 @@ struct CommentInputView: View {
     var body: some View {
         VStack {
             Rectangle()
-                .foregroundColor(Color(.separator))
+                .foregroundColor(Color.black)
                 .frame(width: UIScreen.main.bounds.width, height: 0.8)
             
             HStack {
-                TextField("Comment...", text: $inputText)
+                TextField("Add Comment", text: $inputText)
                     .textFieldStyle(PlainTextFieldStyle())
                     .frame(minHeight: 30)
                 
                 Button(action: action) {
                     Text("Send")
-                        .bold()
-                        .foregroundColor(.black)
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .frame(width: 80, height: 40)
+                        .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .leading, endPoint: .trailing))
+                        .clipShape(Capsule())
+                        .padding(.trailing, 2)
                 }
             }
             .padding(.horizontal)

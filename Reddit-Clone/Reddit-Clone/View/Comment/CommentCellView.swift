@@ -12,28 +12,28 @@ struct CommentCellView: View {
     let comment: Comment
     
     var body: some View {
-        Text("Hello")
-        //HStack {
-            //KFImage(URL(string: comment.profileImageURL))
-            //    .resizeTo(width: 36, height: 36)
-            //    .clipShape(Circle())
+        LazyVStack(alignment: .leading) {
             
-            //HStack {
-            //    Text(comment.username)
-            //        .font(.system(size: 14, weight: .semibold))
-            //    +
-            //    Text(" \(comment.comment)")
-            //        .font(.system(size: 14))
-                
-            //    Spacer()
-                
-            //    Text(comment.timestampText())
-            //        .foregroundColor(.gray)
-            //        .font(.system(size: 12))
-            //        .padding(.trailing)
-            //}
-        //}
-        //.padding(.horizontal)
+            VStack (alignment: .leading) {
+                HStack {
+                    KFImage(URL(string: comment.profileImageURL))
+                     .resizeTo(width: 36, height: 36)
+                     .clipShape(Circle())
+                    
+                    Text(comment.username)
+                        .font(.system(size: 14, weight: .semibold))
+                    Text("\(comment.timestamp)")
+                        .foregroundColor(.gray)
+                        .font(.system(size: 14))
+                        .padding(.trailing)
+                    
+                }
+                Text(comment.commentText)
+                    .font(.system(size: 14))
+            }
+            .padding(.leading)
+        }
     }
 }
+
 
