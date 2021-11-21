@@ -59,7 +59,7 @@ struct ProfileView: View {
             
             Spacer()
             
-            FeedView()
+            ProfileFeedView(viewModel:viewModel)
             
         }
     }
