@@ -31,8 +31,8 @@ class SearchViewModel : ObservableObject {
             self.data.append(contentsOf: documents.compactMap {
                 try? Data.RedditUser(user: $0.data(as:  User.self)!)
             })
+            
         }
-        
         Firestore.firestore().collection("groups").getDocuments { (snap , error) in
             if let error = error {
                 print(error.localizedDescription)
@@ -51,10 +51,10 @@ class SearchViewModel : ObservableObject {
         let lowercase = input.lowercased()
         return data.filter {
             switch $0 {
-            case let .RedditUser(user) :
-                return user.username.contains(lowercase)
-            case let .RedditGroup(group) :
-                return group.groupname.contains(lowercase)
+            case .RedditUser(user: let user):
+                return user.username.lowercased().contains(lowercase)
+            case .RedditGroup(group: let group):
+                return group.groupname.lowercased().contains(lowercase)
             }
         }
     }

@@ -152,8 +152,8 @@ class GroupCellViewModel : ObservableObject {
             
             guard let documents = snap?.documents else { return }
             
-            self.group.groupStat.followers = documents.count
-            self.group.followers = documents.compactMap {
+            self.group.groupStat = GroupStat(followers: documents.count)
+            self.group.user_followers = documents.compactMap {
                 try? $0.data(as: User.self)
             }
         }

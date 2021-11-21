@@ -18,10 +18,14 @@ class GroupViewModel : ObservableObject {
             "ownerID" : userID,
             "groupname" : groupname,
             "description" : description,
-            "following" : 0
         ] as [String : Any]
         
-        Firestore.firestore().collection("groups").document(userID).collection("user-groups").addDocument(data: data)
+        Firestore.firestore().collection("groups").addDocument(data: data) { error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+        }
     }
  
 }
