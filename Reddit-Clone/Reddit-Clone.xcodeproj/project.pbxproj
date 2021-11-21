@@ -23,8 +23,8 @@
 		12C9BD6B274A39EA004FDF5E /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C9BD69274A39EA004FDF5E /* SearchCell.swift */; };
 		12C9BD6C274A39EA004FDF5E /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C9BD6A274A39EA004FDF5E /* SearchListView.swift */; };
 		12C9BD6E274A3BD3004FDF5E /* CreatePostTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C9BD6D274A3BD3004FDF5E /* CreatePostTextView.swift */; };
-		12C9BD70274A5827004FDF5E /* ProfileFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C9BD6F274A5827004FDF5E /* ProfileFeedView.swift */; };
 		12C9BD74274A58C7004FDF5E /* GroupFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C9BD73274A58C7004FDF5E /* GroupFeedView.swift */; };
+		12C9BD7A274A7DAA004FDF5E /* ProfielFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C9BD79274A7DAA004FDF5E /* ProfielFeedView.swift */; };
 		12D7793727497303009F0DD5 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7791E27497302009F0DD5 /* TextArea.swift */; };
 		12D7793827497303009F0DD5 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7791F27497302009F0DD5 /* CreatePostView.swift */; };
 		12D7793927497303009F0DD5 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7792027497302009F0DD5 /* PostView.swift */; };
@@ -88,8 +88,8 @@
 		12C9BD69274A39EA004FDF5E /* SearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		12C9BD6A274A39EA004FDF5E /* SearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListView.swift; sourceTree = "<group>"; };
 		12C9BD6D274A3BD3004FDF5E /* CreatePostTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostTextView.swift; sourceTree = "<group>"; };
-		12C9BD6F274A5827004FDF5E /* ProfileFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFeedView.swift; sourceTree = "<group>"; };
 		12C9BD73274A58C7004FDF5E /* GroupFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedView.swift; sourceTree = "<group>"; };
+		12C9BD79274A7DAA004FDF5E /* ProfielFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfielFeedView.swift; sourceTree = "<group>"; };
 		12D7791E27497302009F0DD5 /* TextArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		12D7791F27497302009F0DD5 /* CreatePostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
 		12D7792027497302009F0DD5 /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
@@ -291,7 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				12D7792D27497303009F0DD5 /* ProfileView.swift */,
-				12C9BD6F274A5827004FDF5E /* ProfileFeedView.swift */,
+				12C9BD79274A7DAA004FDF5E /* ProfielFeedView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -516,7 +516,6 @@
 				12D7793B27497303009F0DD5 /* NotificationCell.swift in Sources */,
 				12FC567B2742965F00E1F653 /* FeedCellViewModel.swift in Sources */,
 				120EE44227439C52005B2E32 /* SearchViewModel.swift in Sources */,
-				12C9BD70274A5827004FDF5E /* ProfileFeedView.swift in Sources */,
 				122BB1C5273EACE500D00E76 /* Reddit_CloneApp.swift in Sources */,
 				12D7794727497303009F0DD5 /* ForgotPasswordView.swift in Sources */,
 				12C9BD6C274A39EA004FDF5E /* SearchListView.swift in Sources */,
@@ -527,6 +526,7 @@
 				120EE45227441F53005B2E32 /* ProfileViewModel.swift in Sources */,
 				12D7795127497311009F0DD5 /* CustomTextField.swift in Sources */,
 				12D7794627497303009F0DD5 /* LoginView.swift in Sources */,
+				12C9BD7A274A7DAA004FDF5E /* ProfielFeedView.swift in Sources */,
 				12D7794827497303009F0DD5 /* RegisterView.swift in Sources */,
 				120EE4462743DE33005B2E32 /* RedditSearchData.swift in Sources */,
 				12D7793927497303009F0DD5 /* PostView.swift in Sources */,
